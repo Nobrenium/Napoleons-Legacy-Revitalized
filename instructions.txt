@@ -1,0 +1,3 @@
+place all folders in the Napoleon's Legacy folder upon installation. I am unsure why, but Github just refuses to cooperate when trying to place the folder inside. 
+
+if there is not a folder named Napoleon's Legacy, simply make one.
