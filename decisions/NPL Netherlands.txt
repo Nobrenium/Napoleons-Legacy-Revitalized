@@ -1,0 +1,21 @@
+political_decisions = {
+	request_independence_netherlands = {
+		picture = move_home
+		potential = {
+		tag = NET
+		year = 1840
+		vassal_of = FRA
+		NOT = { has_country_flag = net_independence }
+		}
+	allow = {
+		state_n_government = 1
+		prestige = 20
+		idealism = 1
+		}
+	effect = {
+		FRA = { country_event = 00012 }
+		set_country_flag = net_independence
+		prestige 15
+	}
+	}
+}
