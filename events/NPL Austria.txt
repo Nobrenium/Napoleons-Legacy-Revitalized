@@ -1,198 +1,78 @@
-#Starting event announcing Germanization
+#Starting event announcing Austrian position, setup for future events
 country_event = {
-    id = 55010
-    title = "EVTNAME55010"
-    desc = "EVTDESC55010"
+    id = 00013
+    title = "EVTNAME00013"
+    desc = "EVTDESC00013"
     picture = "Ferdinand"
 
     trigger = {
-        OR = {
-            tag = AUS
-            tag = KUK
-            tag = DNB
-        }
-    }
+	OR = {
+		tag = AUS
+		tag = KUK
+		tag = DNB
+		}
+	}
 
-    fire_only_once = yes
+	fire_only_once = yes
 
-    mean_time_to_happen =  {
-        days = 1
-    }
+	mean_time_to_happen = { days = 1 }
 
-    option = {
-        name = "EVTOPTA55010"
-    }
+	option = {
+		name = "EVTOPTA00013"
+		set_country_flag = ferdinand_king
+		set_country_flag = metternich_pm
+		set_global_flag = hre_not_empire
+	}
 }
-
-#Resignation of Metternich
+#Hungary rebels
 country_event = {
-    id = 55017
-    title = "EVTNAME55017"
-    desc = "EVTDESC55017"
-    picture = "Upperhouse"
+    id = 00014
+    title = "EVTNAME00014"
+    desc = "EVTDESC00014"
+    picture = "Ferdinand"
 
     trigger = {
-        tag = AUS
-        has_country_flag = liberal_revolution_fired
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen =  {
-        months = 1
-    }
-
-
-    option = {
-        name = "EVTOPTA55017"
-        any_pop = {
-            ideology = {
-                value = liberal
-                factor = 0.1
-            }
-        }
-
-        any_pop = {
-            scaled_militancy = {
-                factor = -1
-                ideology = liberal
-            }
-        }
-
-        any_pop = {
-            scaled_consciousness = {
-                factor = 1
-                ideology = liberal
-            }
-        }
-
-        set_country_flag = metternich_gone
-    }
+	tag = HUN
+	year = 1839
+	vassal_of = AUS
+	NOT = { has_country_flag = hun_ind_war }
+		}
+	mean_time_to_happen = { months = 1 }
+	option = {
+		name = "EVTOPTA00014"
+		set_country_flag = hun_ind_war
+		AUS = {
+			release_vassal = HUN
+			country_event = 00015
+		}
+	}
 }
-
-#Jacobin Rebels in Vienna
+#Austrian Response, leads to Great Collapse
 country_event = {
-    id = 55018
-    title = "EVTNAME55018"
-    desc = "EVTDESC55018"
-    picture = "Riot"
-
-    trigger = {
-        tag = AUS
-        has_country_flag = metternich_gone
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen =  {
-        months = 2
-    }
-
-    option = {
-        name = "EVTOPTA55018"
-        prestige = -30
-        any_pop = {
-            ideology = {
-                value = liberal
-                factor = 0.1
-            }
-        }
-        any_pop = {
-            scaled_militancy = {
-                factor = -3
-                ideology = liberal
-            }
-        }
-        any_pop = {
-            scaled_consciousness = {
-                factor = 3
-                ideology = liberal
-            }
-        }
-        set_country_flag = austrian_constitution
-        ai_chance = {
-            factor = 80
-                }
-    }
-
-    option = {
-        name = "EVTOPTB55018"
-        any_pop = {
-            scaled_militancy = {
-                factor = 5
-                ideology = liberal
-            }
-        }
-
-        set_country_flag = austrian_constitution
-
-        ai_chance = {
-            factor = 20
-        }
-    }
-}
-
-#Franz Joseph comes to the throne
-country_event = {
-    id = 55019
-    title = "EVTNAME55019"
-    desc = "EVTDESC55019"
-    picture = "Sisi"
-
-    trigger = {
-        tag = AUS
-        has_country_flag = austrian_constitution
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen =  {
-        months = 3
-    }
-
-    option = {
-        name = "EVTOPTA55019"
-        government = absolute_monarchy
-        political_reform = none_voting
-        political_reform = appointed
-        political_reform = censored_press
-        political_reform = underground_parties
-
-        prestige = 10
-        set_country_flag = franz_emperor
-
-        any_pop = {
-            militancy = -4
-            consciousness = -3
-        }
-    }
-}
-
-#Pan-Slav Congress
-country_event = {
-    id = 55020
-    title = "EVTNAME55020"
-    desc = "EVTDESC55020"
-    picture = "anticorn"
-
-    trigger = {
-        owns = 625
-        tag = AUS
-        has_country_flag = metternich_gone
-    }
-
-    fire_only_once = yes
-
-    mean_time_to_happen =  {
-        months = 1
-    }
-
-    option = {
-        name = "EVTOPTA55020"
-        any_pop = {
-            limit = { has_pop_culture = czech }
-            militancy = 1
-            consciousness = 3
-        }
-    }
+	id = 00015
+	title = "EVTNAME00015"
+	desc = "EVTDESC00015"
+	picture = "Ferdinand"
+	is_triggered_only = yes
+	
+	option = {
+	name = "EVT00015OPTA"
+	set_global_flag = great_collapse
+	prestige = -25
+	casus_belli = {
+		target = HUN
+		type = make_puppet
+		months = 12
+	}
+	war = {
+		target = HUN
+		attacker_goal = { casus_belli = make_puppet }
+	}
+	}
+	option = {
+	name = "EVT00015OPTB"
+	set_global_flag = great_collapse
+	set_global_flag = austria_fail
+	prestige = -50
+	}
 }
