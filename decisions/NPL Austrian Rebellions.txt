@@ -1,2 +1,23 @@
 political_decisions = {
+	banati_serb_war = {
+	potential = {
+		exists = SER
+		tag = BAN
+		has_global_flag = aus_absent
+		NOT = { vassal_of = AUS 
+			has_global_flag = banati_serb_war }
+	}
+	effect = {
+		set_global_flag = banati_serb_war
+		casus_belli = {
+		target = SER
+		type = conquest
+		months = 12
+			}
+		war = {
+		target = SER
+		attacker_goal = { casus_belli = conquest }
+		defender_goal = { casus_belli = conquest }
+		}
+	}
 }
