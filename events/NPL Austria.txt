@@ -76,7 +76,7 @@ country_event = {
 	option = {
 	name = "EVT00015OPTB"
 	set_global_flag = great_collapse
-	set_global_flag = austria_fail
+	set_global_flag = hun_free
 	prestige = -50
 	}
 }
@@ -131,5 +131,10 @@ country_event = {
 	attacker_goal = { casus_belli = conquest }
 	defender_goal = { casus_belli = humiliate }
 		}
+	}
+	option = {
+	name = "EVTOPTB00018"
+	set_global_flag = koi_free
+	prestige = -50
 	}
 }
