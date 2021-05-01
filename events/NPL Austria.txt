@@ -44,8 +44,12 @@ country_event = {
 		AUS = {
 			release_vassal = HUN
 			country_event = 00015
+			country_event = 00016
 		}
-	}
+		KOI = {
+			country_event = 00017
+		}
+	}	
 }
 #Austrian Response, leads to Great Collapse
 country_event = {
@@ -74,5 +78,58 @@ country_event = {
 	set_global_flag = great_collapse
 	set_global_flag = austria_fail
 	prestige = -50
+	}
+}
+country_event = {
+	id = 00016
+	title = "EVTNAME00016"
+	desc = "EVTDESC00016"
+	is_triggered_only = yes
+
+	option = {
+	name = "EVTOPTA00016"
+	aus_absent
+	prestige = -25
+	release_vassal = CRO
+	release_vassal = BAN
+	release_vassal = SIE
+	release_vassal = SER
+	release_vassal = BKV
+	}
+}
+country_event = {
+	id = 00017
+	title = "EVTNAME00017"
+	desc = "EVTDESC00017"
+	is_triggered_only = yes
+
+	option = {
+	name = "EVTOPTA00017"
+	prestige 50
+	AUS = {
+		release_vassal = KOI
+		country_event = 00018
+		}
+	}
+}
+country_event = {
+	id = 00018
+	title = "EVTNAME00018"
+	desc = "EVTDESC00018"
+	is_triggered_only = yes
+
+	option = {
+	name = "EVTOPTA00018"
+	set_global_flag = ita_ind_war
+	casus_belli = {
+	target = KOI
+	type = conquest
+	months = 12
+			}
+	war = {
+	target = KOI
+	attacker_goal = { casus_belli = conquest }
+	defender_goal = { casus_belli = humiliate }
+		}
 	}
 }
