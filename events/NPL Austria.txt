@@ -138,3 +138,21 @@ country_event = {
 	prestige = -50
 	}
 }
+country_event = {
+	id = 00019
+	title = "EVTNAME00019"
+	desc = "EVTDESC00019"
+	fire_only_once = yes
+	trigger = {
+	tag = KOI
+	truce_with = AUS
+	has_global_flag = ita_ind_war
+	NOT = { vassal_of = AUS }
+	}
+	option = {
+	name = "EVTOPTA00019"
+	prestige = 50
+	set_global_flag = koi_free
+	clr_global_flag = ita_ind_war
+	}
+}
