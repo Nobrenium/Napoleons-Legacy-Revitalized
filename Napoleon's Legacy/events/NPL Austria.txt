@@ -1,0 +1,158 @@
+#Starting event announcing Austrian position, setup for future events
+country_event = {
+    id = 00013
+    title = "EVTNAME00013"
+    desc = "EVTDESC00013"
+    picture = "Ferdinand"
+
+    trigger = {
+	OR = {
+		tag = AUS
+		tag = KUK
+		tag = DNB
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA00013"
+		set_country_flag = ferdinand_king
+		set_country_flag = metternich_pm
+		set_global_flag = hre_not_empire
+	}
+}
+#Hungary rebels
+country_event = {
+    id = 00014
+    title = "EVTNAME00014"
+    desc = "EVTDESC00014"
+    picture = "Ferdinand"
+
+    trigger = {
+	tag = HUN
+	year = 1839
+	vassal_of = AUS
+	NOT = { has_country_flag = hun_ind_war }
+		}
+	mean_time_to_happen = { months = 1 }
+	option = {
+		name = "EVTOPTA00014"
+		set_country_flag = hun_ind_war
+		AUS = {
+			release_vassal = HUN
+			country_event = 00015
+			country_event = 00016
+		}
+		KOI = {
+			country_event = 00017
+		}
+	}	
+}
+#Austrian Response, leads to Great Collapse
+country_event = {
+	id = 00015
+	title = "EVTNAME00015"
+	desc = "EVTDESC00015"
+	picture = "Ferdinand"
+	is_triggered_only = yes
+	
+	option = {
+	name = "EVT00015OPTA"
+	set_global_flag = great_collapse
+	prestige = -25
+	casus_belli = {
+		target = HUN
+		type = conquest
+		months = 12
+	}
+	war = {
+		target = HUN
+		attacker_goal = { casus_belli = conquest }
+	}
+	}
+	option = {
+	name = "EVT00015OPTB"
+	set_global_flag = great_collapse
+	set_global_flag = hun_free
+	prestige = -50
+	}
+}
+country_event = {
+	id = 00016
+	title = "EVTNAME00016"
+	desc = "EVTDESC00016"
+	is_triggered_only = yes
+
+	option = {
+	name = "EVTOPTA00016"
+	set_global_flag = aus_absent
+	prestige = -25
+	release_vassal = CRO
+	release_vassal = BAN
+	release_vassal = SIE
+	release_vassal = SER
+	release_vassal = BKV
+	}
+}
+country_event = {
+	id = 00017
+	title = "EVTNAME00017"
+	desc = "EVTDESC00017"
+	is_triggered_only = yes
+
+	option = {
+	name = "EVTOPTA00017"
+	prestige 50
+	AUS = {
+		release_vassal = KOI
+		country_event = 00018
+		}
+	}
+}
+country_event = {
+	id = 00018
+	title = "EVTNAME00018"
+	desc = "EVTDESC00018"
+	is_triggered_only = yes
+
+	option = {
+	name = "EVTOPTA00018"
+	set_global_flag = ita_ind_war
+	casus_belli = {
+	target = KOI
+	type = conquest
+	months = 12
+			}
+	war = {
+	target = KOI
+	attacker_goal = { casus_belli = conquest }
+	defender_goal = { casus_belli = humiliate }
+		}
+	}
+	option = {
+	name = "EVTOPTB00018"
+	set_global_flag = koi_free
+	prestige = -50
+	}
+}
+country_event = {
+	id = 00019
+	title = "EVTNAME00019"
+	desc = "EVTDESC00019"
+	fire_only_once = yes
+	trigger = {
+	tag = KOI
+	truce_with = AUS
+	has_global_flag = ita_ind_war
+	NOT = { vassal_of = AUS }
+	}
+	option = {
+	name = "EVTOPTA00019"
+	prestige = 50
+	set_global_flag = koi_free
+	clr_global_flag = ita_ind_war
+	}
+}
