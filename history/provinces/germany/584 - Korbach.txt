@@ -1,6 +1,0 @@
-owner = WST
-controller = WST
-add_core = WST
-add_core = GER
-trade_goods = timber
-life_rating = 40
