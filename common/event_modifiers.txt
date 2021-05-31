@@ -2480,3 +2480,9 @@ force_assimilation = {
     non_accepted_pop_militancy_modifier = 0.3
     icon = 19
 }
+assyrian_revival = {
+    global_population_growth = 0.1
+    assimilation_rate = 2.0
+    icon = 17
+}
+}

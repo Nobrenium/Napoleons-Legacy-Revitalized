@@ -1,0 +1,115 @@
+political_decisions = {
+	byz_first_steps = {
+	picture = "constantinople"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_global_flag = byz_restored
+		NOT = { has_country_flag = byz_first_steps }
+		}
+	effect = {
+		prestige = 15
+		badboy = 5
+		TUR_809 = { add_core = BYZ }
+		TUR_806 = { add_core = BYZ }
+		TUR_853 = { add_core = BYZ }
+		802 = { add_core = BYZ }
+		803 = { add_core = BYZ }
+		set_country_flag = byz_first_steps
+		}
+	}
+	byz_alexiad = {
+	picture = "constantinople"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_first_steps
+		NOT = { has_country_flag = byz_alexiad }
+		}	
+	allow = {
+		owns = 802
+		owns = 853
+		owns = 806
+		owns = 815
+		}
+	effect = {
+		prestige = 30
+		badboy = 10
+		TUR_880 = {
+			add_core = BYZ
+		}
+		TUR_863 = {
+			add_core = BYZ
+		}
+		TUR_869 = {
+			add_core = BYZ
+		}
+		set_country_flag = byz_alexiad
+		}
+	}
+	byz_bulgarian_reconquest = {
+	picture = "greater_bulgaria"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_alexiad
+		NOT = { has_country_flag = byz_bulgarian_reconquest }
+		}
+	allow = {
+		owns = 869
+		owns = 863
+		owns = 880
+		}
+	effect = {
+		set_country_flag = byz_bulgarian_reconquest
+		prestige = 20
+		badboy = 8
+		TUR_803 = { add_core = BYZ }
+		TUR_810 = { add_core = BYZ }
+		TUR_674 = { add_core = BYZ }
+		MON_2582 = { add_core = BYZ }
+		}
+	}
+	byz_anatolian_reconquest = {
+	picture = "population_to_turkey"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_bulgarian_reconquest
+		NOT = { has_country_flag = byz_anatolian_reconquest }
+		}
+	allow = {
+		owns = 798
+		owns = 812
+		owns = 674
+		}
+	effect = {
+		set_country_flag = byz_anatolian_reconquest 
+		prestige = 25
+		badboy = 10
+		TUR_873 = { add_core = BYZ }
+		TUR_876 = { add_core = BYZ }
+		}
+	}
+	byz_black_sea = {
+	picture = "drang_nach_osten"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_bulgarian_reconquest
+		NOT = { has_country_flag = byz_black_sea }
+		}
+	allow = {
+		owns = 798
+		owns = 812
+		owns = 674
+		}
+	effect = {
+		set_country_flag = byz_black_sea
+		prestige = 15
+		badboy = 5
+		TUR_882 = { add_core = BYZ }
+		RUS_964 = { add_core = BYZ }
+		}
+	}
+}
