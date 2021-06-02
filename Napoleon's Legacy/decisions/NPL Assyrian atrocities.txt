@@ -1,0 +1,40 @@
+political_decisions = {
+	kill_the_arabs = {
+	picture = population_to_turkey
+	alert = yes
+		potential = {
+			ideological_thought = 1
+			tag = ASY
+			NOT = { has_country_flag = assyrian_genocide_one }
+			}
+		allow = {
+			war = no
+			owns = 926
+			owns = 932
+			}
+		effect = {
+			badboy = 23
+			prestige = 20
+			set_country_flag = assyrian_genocide_one
+			ASY = { any_owned = { limit = { is_core = ASY }
+			any_pop = {
+				limit = { is_culture_group = turko_semitic }
+				reduce_pop = 0.25
+				militancy = 9
+				consciousness = 4
+				} 
+			any_pop = {
+				limit = { is_culture_group = levantine }
+				reduce_pop = 2.00
+				militancy = -9
+				}
+			any_pop = {
+				limit = { is_culture_group = arab }
+				reduce_pop = 0.25
+				militancy = 9
+				}
+				add_province_modifier = { name = assyrian_revival duration = 3600 }
+			}
+	}
+}
+}
