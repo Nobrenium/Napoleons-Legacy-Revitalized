@@ -53,6 +53,7 @@ political_decisions = {
 			NOT = { has_country_flag = homeland_cleansing }
 			}
 		effect = {
+			ASY = {create_vassal = IRQ}
 			901 = {secede_province = IRQ}
 			badboy = 22
 			prestige = 20
