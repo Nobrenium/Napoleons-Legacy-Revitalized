@@ -14,7 +14,7 @@ country_event = {
     trigger = {
         tag = EGY
         vassal_of = TUR
-        year = 1837
+        year = 1841
         NOT = { has_country_flag = fate_of_egypt }
         NOT = { war_with = TUR }
     }
