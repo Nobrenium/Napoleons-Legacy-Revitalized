@@ -2480,3 +2480,21 @@ force_assimilation = {
     non_accepted_pop_militancy_modifier = 0.3
     icon = 19
 }
+assyrian_revival = {
+    global_population_growth = 0.1
+    assimilation_rate = 2.0
+    icon = 17
+}
+metternich = {
+    prestige = 0.02
+    core_pop_militancy_modifier = 0.03
+    diplomatic_points_modifier = 0.20
+    ruling_party_support = 0.2
+    badboy = -0.03
+    icon = 17
+}
+ferdinand_king = {
+    assimilation_rate = 0.25
+    non_accepted_pop_militancy_modifier = -0.03
+    icon = 17
+}

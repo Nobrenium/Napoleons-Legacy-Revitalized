@@ -527,6 +527,13 @@ political_decisions = {
             2414 = { add_core = ASY }
             925 = { add_core = ASY }
             928 = { add_core = ASY }
+		TUR_931 = { add_core = ASY }
+		TUR_935 = { add_core = ASY }
+		EGY_903 = { add_core = ASY }
+		EGY_897 = { add_core = ASY }
+		TUR_893 = { add_core = ASY }
+		TUR_894 = { add_core = ASY }
+		EGY_915 = { add_core = ASY }
         }
 
         ai_will_do = {

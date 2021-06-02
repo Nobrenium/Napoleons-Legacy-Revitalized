@@ -53,7 +53,7 @@ country_event = {
 		set_country_flag = bulgars_agitated
 		any_owned = {
 			limit = { is_core = BUL }
-		add_province_modifier = { name = nationalist_agitation }
+		add_province_modifier = { name = nationalist_agitation duration 730 }
 		}
 	}
 }
@@ -70,11 +70,12 @@ country_event = {
 		set_country_flag = serbs_agitated
 		any_owned = {
 			limit = { is_core = SER }
-		add_province_modifier = { name = nationalist_agitation }
+		add_province_modifier = { name = nationalist_agitation duration 730 }
 		}
 	}
 }
 #Ottoman Great Collapse
+#Phoenix Rebellion
 country_event = {
 	id = 00024
 	title = "EVTNAME00024"
@@ -86,13 +87,13 @@ country_event = {
 	has_country_flag = bulgars_agitated
 	has_country_flag = serbs_agitated
 	has_global_flag = great_collapse
+	tag = TUR
 	}
 	mean_time_to_happen = { days = 12 }
 
 	option = {
 		name = "EVTOPTA00024"
-	release_vassal = MOL
-	release_vassal = WAL
+		set_global_flag = ottoman_great_collapse
 	any_owned = {
 		limit = {
 		OR = { pop_majority_culture = greek
@@ -100,16 +101,40 @@ country_event = {
 			region = TUR_860
 			region = TUR_855
 			region = TUR_823
+			province_id = 817
+			province_id = 830
+			province_id = 861
+			province_id = 865
 			}
+		NOT = {
+			province_id = 807
+			province_id = 806
+			province_id = 808
+			province_id = 823
+			province_id = 829
+			province_id = 822
+			province_id = 805
+			province_id = 821
+			province_id = 820
+			province_id = 819
+			province_id = 802
+			province_id = 803
+			province_id = 820
+			province_id = 849
+			province_id = 851
+			province_id = 852
+			province_id = 853
+			province_id = 824
+			province_id = 825
 			}
-
+		}
 		secede_province = GRE
 		}
 
 	GRE = {
 		government = absolute_monarchy
             political_reform = mandatory_service
-            capital = 833 # So they don't get that 12% loss due to Athens blockade
+            capital = 860
             leadership = 80
             treasury = 10000
             small_arms = 100
@@ -123,8 +148,136 @@ country_event = {
 	 add_country_modifier = {
                 name = small_country_draft
                 duration = 1825
-            }
+            		}
+		}	
+	war = {
+		target = GRE
+		attacker_goal = {
+			casus_belli = annex_core_country
+			}
+		defender_goal = {
+			casus_belli = status_quo
+			}
+		}
 	}
+	option = {
+		name = "EVTOPTB00024"
+		set_global_flag = ottoman_great_collapse
+	any_owned = {
+		limit = {
+		OR = { pop_majority_culture = greek
+			is_core = GRE 
+			region = TUR_860
+			region = TUR_855
+			region = TUR_823
+			province_id = 817
+			province_id = 830
+			province_id = 861
+			province_id = 865
+			}
+		NOT = {
+			province_id = 807
+			province_id = 806
+			province_id = 808
+			province_id = 823
+			province_id = 829
+			province_id = 822
+			province_id = 805
+			province_id = 821
+			province_id = 820
+			province_id = 819
+			province_id = 802
+			province_id = 803
+			province_id = 820
+			province_id = 849
+			province_id = 851
+			province_id = 852
+			province_id = 853
+			province_id = 824
+			province_id = 825
+			}
+		}
+		secede_province = GRE
+		}
+
+	GRE = {
+		government = absolute_monarchy
+            political_reform = mandatory_service
+            capital = 860
+            leadership = 80
+            treasury = 10000
+            small_arms = 100
+            ammunition = 200
+            canned_food = 200
+            wine = 200
+            liquor = 200
+
+	 any_pop = { militancy = -6 }
+
+	 add_country_modifier = {
+                name = small_country_draft
+                duration = 1825
+            		}
+		}	
+	war = {
+		target = GRE
+		attacker_goal = {
+			casus_belli = annex_core_country
+			}
+		defender_goal = {
+			casus_belli = status_quo
+			}
+		}
+	change_tag_no_core_switch = GRE
+	}
+}
+#Bulgarian Rebellion
+country_event = {
+	id = 00025
+	title = "EVTNAME00025"
+	desc = "EVTDESC00025"
+
+	fire_only_once = yes
+	trigger = { has_global_flag = ottoman_great_collapse 
+		tag = TUR }
+	mean_time_to_happen = { days = 4 }
+
+		option = {
+		name = "EVTOPTA00025"
+		set_global_flag = bulgarian_revolution
+	any_owned = {
+		limit = {
+		OR = { pop_majority_culture = bulgarian
+			is_core = BUL
+			province_id = 798
+			province_id = 799
+			}
+		NOT = {
+			province_id = 1780
+			province_id = 807
+			province_id = 806
+			province_id = 808
+			province_id = 823
+			province_id = 829
+			province_id = 822
+			province_id = 805
+			province_id = 821
+			province_id = 820
+			province_id = 819
+			province_id = 802
+			province_id = 803
+			province_id = 820
+			province_id = 849
+			province_id = 851
+			province_id = 852
+			province_id = 853
+			province_id = 824
+			province_id = 825
+			}
+		}
+		secede_province = BUL
+		}
+
 	BUL = {
 		government = absolute_monarchy
             political_reform = mandatory_service
@@ -141,10 +294,56 @@ country_event = {
 	 add_country_modifier = {
                 name = small_country_draft
                 duration = 1825
+            		}
+		}	
+	war = {
+		target = BUL
+		attacker_goal = {
+			casus_belli = annex_core_country
+			}
+		defender_goal = {
+			casus_belli = status_quo
+			}
 		}
 	}
-	SER = {
-	government = absolute_monarchy
+	option = {
+		name = "EVTOPTB00025"
+		set_global_flag = bulgarian_revolution
+	any_owned = {
+		limit = {
+		OR = { pop_majority_culture = bulgarian
+			is_core = BUL
+			province_id = 798
+			province_id = 799
+			}
+		NOT = {
+			province_id = 1780
+			province_id = 807
+			province_id = 806
+			province_id = 808
+			province_id = 823
+			province_id = 829
+			province_id = 822
+			province_id = 805
+			province_id = 821
+			province_id = 820
+			province_id = 819
+			province_id = 802
+			province_id = 803
+			province_id = 820
+			province_id = 849
+			province_id = 851
+			province_id = 852
+			province_id = 853
+			province_id = 824
+			province_id = 825
+			}
+		}
+		secede_province = BUL
+		}
+
+	BUL = {
+		government = absolute_monarchy
             political_reform = mandatory_service
             leadership = 80
             treasury = 10000
@@ -159,52 +358,658 @@ country_event = {
 	 add_country_modifier = {
                 name = small_country_draft
                 duration = 1825
+            		}
+		}	
+	war = {
+		target = BUL
+		attacker_goal = {
+			casus_belli = annex_core_country
+			}
+		defender_goal = {
+			casus_belli = status_quo
+			}
 		}
+	change_tag_no_core_switch = BUL
 	}
+}
+#Serbian Revolution
+country_event = {
+	id = 00026
+	title = "EVTNAME00026"
+	desc = "EVTDESC00026"
+
+	fire_only_once = yes
+	trigger = { has_global_flag = bulgarian_revolution tag = TUR }
+	mean_time_to_happen = { days = 4 }
+
+		option = {
+		name = "EVTOPTA00025"
+		set_global_flag = serbian_revolution
 	any_owned = {
-		limit = { OR = {
-			pop_majority_culture = bulgarian
-			is_core = BUL
-			} }
-		secede_province = BUL
-		}
-	any_owned = {
-		limit = { OR = {
-			pop_majority_culture = serbian
+		limit = {
+		OR = { pop_majority_culture = serbian
 			is_core = SER
-			is_core = ALB
 			is_core = MON
-			} }
+			}
+		NOT = {
+			province_id = 1780
+			province_id = 807
+			province_id = 806
+			province_id = 808
+			province_id = 823
+			province_id = 829
+			province_id = 822
+			province_id = 805
+			province_id = 821
+			province_id = 820
+			province_id = 819
+			province_id = 802
+			province_id = 803
+			province_id = 820
+			province_id = 849
+			province_id = 851
+			province_id = 852
+			province_id = 853
+			province_id = 824
+			province_id = 825
+			}
+		}
 		secede_province = SER
 		}
-	
-		set_global_flag = ottoman_great_collapse
-		war = {
-			target = GRE
-			attacker_goal = {
-				casus_belli = annex_core_country
+
+	SER = {
+            political_reform = mandatory_service
+            leadership = 80
+            treasury = 10000
+            small_arms = 100
+            ammunition = 200
+            canned_food = 200
+            wine = 200
+            liquor = 200
+
+	 any_pop = { militancy = -6 }
+
+	 add_country_modifier = {
+                name = small_country_draft
+                duration = 1825
+            		}
+		}	
+	war = {
+		target = SER
+		attacker_goal = {
+			casus_belli = annex_core_country
 			}
-			defender_goal = {
-				casus_belli = status_quo
+		defender_goal = {
+			casus_belli = status_quo
 			}
 		}
-		war = {
-			target = BUL
-			attacker_goal = {
-				casus_belli = annex_core_country
+	}
+	option = {
+		name = "EVTOPTB00026"
+		set_global_flag = serbian_revolution
+	any_owned = {
+		limit = {
+		OR = { pop_majority_culture = serbian
+			is_core = SER
+			is_core = MON
 			}
-			defender_goal = {
-				casus_belli = status_quo
+		NOT = {
+			province_id = 1780
+			province_id = 807
+			province_id = 806
+			province_id = 808
+			province_id = 823
+			province_id = 829
+			province_id = 822
+			province_id = 805
+			province_id = 821
+			province_id = 820
+			province_id = 819
+			province_id = 802
+			province_id = 803
+			province_id = 820
+			province_id = 849
+			province_id = 851
+			province_id = 852
+			province_id = 853
+			province_id = 824
+			province_id = 825
 			}
 		}
+		secede_province = SER
+		}
+
+	SER = {
+		government = absolute_monarchy
+            political_reform = mandatory_service
+            leadership = 80
+            treasury = 10000
+            small_arms = 100
+            ammunition = 200
+            canned_food = 200
+            wine = 200
+            liquor = 200
+
+	 any_pop = { militancy = -6 }
+
+	 add_country_modifier = {
+                name = small_country_draft
+                duration = 1825
+            		}
+		}	
+	war = {
+		target = SER
+		attacker_goal = {
+			casus_belli = annex_core_country
+			}
+		defender_goal = {
+			casus_belli = status_quo
+			}
+		}
+	change_tag_no_core_switch = SER
+	}
+}
+#Albanian Revolution
+country_event = {
+	id = 00027
+	title = "EVTNAME00027"
+	desc = "EVTDESC00027"
+
+	fire_only_once = yes
+	trigger = { has_global_flag = serbian_revolution tag = TUR }
+	mean_time_to_happen = { days = 4 }
+
+		option = {
+		name = "EVTOPTA00027"
+		set_global_flag = albanian_revolution
+	any_owned = {
+		limit = {
+		OR = { pop_majority_culture = albanian
+			is_core = ALB
+			province_id = 825
+			}
+		NOT = {
+			province_id = 1780
+			}
+		}
+		secede_province = ALB
+		}
+
+	ALB = {
+            political_reform = mandatory_service
+            leadership = 80
+            treasury = 10000
+            small_arms = 100
+            ammunition = 200
+            canned_food = 200
+            wine = 200
+            liquor = 200
+
+	 any_pop = { militancy = -6 }
+
+	 add_country_modifier = {
+                name = small_country_draft
+                duration = 1825
+            		}
+		}	
+	war = {
+		target = ALB
+		attacker_goal = {
+			casus_belli = annex_core_country
+			}
+		defender_goal = {
+			casus_belli = status_quo
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB00027"
+		set_global_flag = albanian_revolution
+	any_owned = {
+		limit = {
+		OR = { pop_majority_culture = albanian
+			is_core = ALB
+			province_id = 825
+			}
+		NOT = {
+			province_id = 1780
+			}
+		}
+		secede_province = ALB
+		}
+
+	ALB = {
+		government = absolute_monarchy
+            political_reform = mandatory_service
+            leadership = 80
+            treasury = 10000
+            small_arms = 100
+            ammunition = 200
+            canned_food = 200
+            wine = 200
+            liquor = 200
+
+	 any_pop = { militancy = -6 }
+
+	 add_country_modifier = {
+                name = small_country_draft
+                duration = 1825
+            		}
+		}	
+	war = {
+		target = ALB
+		attacker_goal = {
+			casus_belli = annex_core_country
+			}
+		defender_goal = {
+			casus_belli = status_quo
+			}
+		}
+	change_tag_no_core_switch = ALB
+	}
+}
+#Macedonian Revolution
+country_event = {
+	id = 00028
+	title = "EVTNAME00028"
+	desc = "EVTDESC00028"
+
+	fire_only_once = yes
+	trigger = { has_global_flag = albanian_revolution tag = TUR }
+	mean_time_to_happen = { days = 4 }
+
+		option = {
+		name = "EVTOPTA00028"
+		set_global_flag = macedonian_revolution
+	any_owned = {
+		limit = {
+		OR = {
+			is_core = MCD
+			province_id = 807
+			province_id = 806
+			province_id = 808
+			province_id = 823
+			province_id = 829
+			province_id = 822
+			province_id = 805
+			province_id = 821
+			province_id = 820
+			province_id = 819
+			province_id = 802
+			province_id = 803
+			province_id = 820
+			province_id = 849
+			province_id = 851
+			province_id = 852
+			province_id = 853
+			province_id = 824
+			province_id = 825
+			}
+		}
+		secede_province = MCD
+		}
+
+	MCD = {
+            political_reform = mandatory_service
+            leadership = 80
+            treasury = 10000
+            small_arms = 100
+            ammunition = 200
+            canned_food = 200
+            wine = 200
+            liquor = 200
+
+	 any_pop = { militancy = -6 }
+
+	 add_country_modifier = {
+                name = small_country_draft
+                duration = 1825
+            		}
 		war = {
-			target = SER
-			attacker_goal = {
-				casus_belli = annex_core_country
+		target = GRE
+		attacker_goal = {
+			casus_belli = annex_core_country
+		}
+		defender_goal = {
+			casus_belli = annex_core_country
+		}
+	}
+	war = {
+		target = BUL
+		attacker_goal = {
+			casus_belli = annex_core_country
+		}
+		defender_goal = {	
+			casus_belli = annex_core_country
+		}
+	}
+		}	
+	war = {
+		target = MCD
+		attacker_goal = {
+			casus_belli = annex_core_country
 			}
-			defender_goal = {
-				casus_belli = status_quo
+		defender_goal = {
+			casus_belli = status_quo
 			}
+		}
+	}
+	option = {
+		name = "EVTOPTB00028"
+		set_global_flag = macedonian_revolution
+	any_owned = {
+		limit = {
+		OR = {
+			is_core = MCD
+			province_id = 807
+			province_id = 806
+			province_id = 808
+			province_id = 823
+			province_id = 829
+			province_id = 822
+			province_id = 805
+			province_id = 821
+			province_id = 820
+			province_id = 819
+			province_id = 802
+			province_id = 803
+			province_id = 820
+			province_id = 849
+			province_id = 851
+			province_id = 852
+			province_id = 853
+			province_id = 824
+			province_id = 825
+			}
+		}
+		secede_province = MCD
+		}
+
+	MCD = {
+		government = absolute_monarchy
+            political_reform = mandatory_service
+            leadership = 80
+            treasury = 10000
+            small_arms = 100
+            ammunition = 200
+            canned_food = 200
+            wine = 200
+            liquor = 200
+
+	 any_pop = { militancy = -6 }
+
+	 add_country_modifier = {
+                name = small_country_draft
+                duration = 1825
+            		}
+	war = {
+		target = GRE
+		attacker_goal = {
+			casus_belli = annex_core_country
+		}
+		defender_goal = {
+			casus_belli = annex_core_country
+		}
+	}
+	war = {
+		target = BUL
+		attacker_goal = {
+			casus_belli = annex_core_country
+		}
+		defender_goal = {	
+			casus_belli = annex_core_country
+		}
+	}
+		}	
+	war = {
+		target = MCD
+		attacker_goal = {
+			casus_belli = annex_core_country
+			}
+		defender_goal = {
+			casus_belli = status_quo
+			}
+		}
+	change_tag_no_core_switch = MCD
+	}
+}
+country_event = {
+	id = 00029
+	title = "EVTNAME00029"
+	desc = "EVTDESC00029"
+	fire_only_once = yes
+	trigger = {
+	tag = GRE
+	owns = 860
+	war = no
+	}
+	mean_time_to_happen = { days = 15 }
+	option = { 
+	name = "EVTOPTA00029"
+	set_global_flag = byz_restored
+	change_tag = BYZ
+	860 = {
+		change_province_name = "Constantinople"
+		}
+	        any_owned = {
+                limit = {
+                    is_colonial = no
+                    OR = {
+                        culture = greek
+                        culture = turkish
+                    }
+                }
+                add_core = BYZ
+		}
+	}
+}
+country_event = {
+	id = 00030
+	title = "EVTNAME00030"
+	desc = "EVTDESC00030"
+	fire_only_once = yes
+	trigger = {
+	tag = TUR
+	war = no
+	has_global_flag = byz_restored
+	}
+	mean_time_to_happen = { days = 15 }
+	option = {
+	name = "EVTOPTA00030"
+	release_vassal = MOL
+	release_vassal = WAL
+	release_vassal = EGY
+	release_vassal = TUN
+	release_vassal = TRI
+	release_vassal = CYR
+	release_vassal = HDJ
+	prestige = -50
+	set_global_flag = sick_man_down
+	any_owned = {
+	limit = {
+	OR = {
+		is_core = ARM
+		pop_majority_culture = armenian
+			}
+		}
+	secede_province = ARM
+	}
+	}
+	option = {
+	name = "EVTOPTB00030"
+	prestige = -50
+	set_global_flag = sick_man_down
+	release_vassal = MOL
+	release_vassal = WAL
+	release_vassal = EGY
+	release_vassal = TUN
+	release_vassal = TRI
+	release_vassal = CYR
+	release_vassal = HDJ
+	any_owned = {
+	limit = {
+	OR = {
+		is_core = ARM
+		pop_majority_culture = armenian
+		}
+		}
+		secede_province = ARM
+		}
+	change_tag_no_core_switch = ARM
+	}	
+}
+country_event = {
+	id = 00031
+	title = "EVTNAME00031"
+	desc = "EVTDESC00031"
+	fire_only_once = yes
+	trigger = {
+	tag = TUR
+	has_global_flag = sick_man_down
+	}
+	mean_time_to_happen = { days = 15 }
+	option = {
+	name = "EVTOPTA00031"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = CLC
+			}
+			secede_province = CLC
+		}
+	}
+	option = {
+	name = "EVTOPTB00031"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = CLC
+			}
+			secede_province = CLC
+		}
+	change_tag_no_core_switch = CLC
+	}
+}
+country_event = {
+	id = 00032
+	title = "EVTNAME00032"
+	desc = "EVTDESC00032"
+	fire_only_once = yes
+	trigger = {
+	tag = TUR
+	has_global_flag = sick_man_down
+	}
+	mean_time_to_happen = { days = 15 }
+	option = {
+	name = "EVTOPTA00032"
+	prestige = -20
+	any_owned = {
+		limit = {
+		OR = {
+			is_core = ASY
+			is_core = IRQ
+			}
+			}
+			secede_province = ASY
+		}
+	}
+	option = {
+	name = "EVTOPTB00032"
+	prestige = -20
+	any_owned = {
+		limit = {
+		OR = {
+			is_core = ASY
+			is_core = IRQ
+			}
+			}
+			secede_province = ASY
+		}
+	change_tag_no_core_switch = ASY
+	}
+}
+country_event = {
+	id = 00033
+	title = "EVTNAME00033"
+	desc = "EVTDESC00033"
+	fire_only_once = yes
+	trigger = {
+	tag = TUR
+	has_global_flag = sick_man_down
+	}
+	mean_time_to_happen = { days = 15 }
+	option = {
+	name = "EVTOPTA00033"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = KDS
+			}
+			secede_province = KDS
+		}
+	}
+	option = {
+	name = "EVTOPTB00033"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = KDS
+			}
+			secede_province = KDS
+		}
+	change_tag_no_core_switch = KDS
+	}
+}
+country_event = {
+	id = 00034
+	title = "EVTNAME00034"
+	desc = "EVTDESC00034"
+	fire_only_once = yes
+	trigger = {
+	tag = TUR
+	has_global_flag = sick_man_down
+	}
+	mean_time_to_happen = { days = 15 }
+	option = {
+	name = "EVTOPTA00034"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = GEO
+			}
+			secede_province = GEO
+		}
+	}
+	option = {
+	name = "EVTOPTB00034"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = GEO
+			}
+			secede_province = GEO
+		}
+	change_tag_no_core_switch = GEO
+	}
+}
+country_event = {
+	id = 00035
+	title = "EVTNAME00035"
+	desc = "EVTDESC00035"
+	fire_only_once = yes
+	trigger = {
+	tag = TUR
+	has_global_flag = sick_man_down
+	}
+	mean_time_to_happen = { days = 15 }
+	option = {
+	name = "EVTOPTA00035"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = EGY
+			}
+			secede_province = EGY
 		}
 	}
 }

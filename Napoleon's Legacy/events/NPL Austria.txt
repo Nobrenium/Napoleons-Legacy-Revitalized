@@ -30,7 +30,7 @@ country_event = {
     title = "EVTNAME00014"
     desc = "EVTDESC00014"
     picture = "Ferdinand"
-
+	fire_only_once = yes
     trigger = {
 	tag = HUN
 	year = 1839
@@ -44,7 +44,6 @@ country_event = {
 		AUS = {
 			release_vassal = HUN
 			country_event = 00015
-			country_event = 00016
 		}
 		KOI = {
 			country_event = 00017
@@ -84,7 +83,11 @@ country_event = {
 	id = 00016
 	title = "EVTNAME00016"
 	desc = "EVTDESC00016"
-	is_triggered_only = yes
+trigger = {
+	tag = AUS
+	has_global_flag = hun_free
+	}
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 	name = "EVTOPTA00016"
@@ -154,5 +157,68 @@ country_event = {
 	prestige = 50
 	set_global_flag = koi_free
 	clr_global_flag = ita_ind_war
+	}
+}
+country_event = {
+	id = 00036
+	title = "EVTNAME00036"
+	desc = "EVTDESC00036"
+	fire_only_once = yes
+	trigger = {
+	tag = HUN
+	truce_with = AUS
+	has_global_flag = hun_ind_war
+	NOT = { vassal_of = AUS }
+	}
+	option = {
+	name = "EVTOPTA00036"
+	prestige = 50
+	set_global_flag = hun_free
+	clr_global_flag = hun_ind_war
+	}
+}
+country_event = {
+	id = 00037
+	title = "EVTNAME00037"
+	desc = "EVTDESC00037"
+	fire_only_once = yes
+	trigger = {
+	tag = AUS
+	has_global_flag = great_collapse
+		}
+	mean_time_to_happen = { months = 3 }
+	option = {
+	name = "EVTOPTA00037"
+	prestige = -15
+	add_country_modifier = { name = metternich duration = 9125 }
+	ruling_party_ideology = conservative
+	set_country_flag = metternich_stays
+	}
+	option = {
+	name = "EVTOPTB00038"
+	prestige = 15
+	set_country_flag = metternich_leaves
+	}
+}
+country_event = {
+	id = 00038
+	title = "EVTNAME00038"
+	desc = "EVTDESC00038"
+	fire_only_once = yes
+	trigger = {
+	tag = AUS
+	has_global_flag = great_collapse
+		}
+	mean_time_to_happen = { months = 3 }
+	option = {
+	name = "EVTOPTA00038"
+	prestige = -20
+	add_country_modifier = { name = ferdinand_king duration = 12775 }
+	set_country_flag = ferdinand_stays
+	}
+	option = {
+	name = "EVTOPTB00038"
+	prestige = 30
+	set_country_flag = franz_joseph
 	}
 }
