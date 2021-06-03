@@ -98,6 +98,9 @@ political_decisions = {
 				consciousness = 8
 				}
 			}
+			ASY = {create_vassal = IRQ}
+			IRQ = {secede_province = 901}
+			901 = {add_core = {IRQ}}
 	}
 }
 }
