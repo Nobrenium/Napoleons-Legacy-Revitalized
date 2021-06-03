@@ -90,7 +90,7 @@ political_decisions = {
 		badboy = 5
 		SER_794 = { add_core = BYZ }
 		TUR_788 = { add_core = BYZ }
-		AUS_781 = { add_core = BYZ }
+		AUS_780 = { add_core = BYZ }
 		}
 	}
 	byz_anatolian_reconquest = {
