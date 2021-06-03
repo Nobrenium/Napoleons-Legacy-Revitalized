@@ -70,6 +70,29 @@ political_decisions = {
 		MON_2582 = { add_core = BYZ }
 		}
 	}
+	byz_danube_frontier = {
+	picture = "greater_bulgaria"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_bulgarian_reconquest
+		NOT = { has_country_flag = byz_danube_frontier }
+		}
+	allow = { 
+		owns = 803
+		owns = 810
+		owns = 2582
+		owns = 674
+		}
+	effect = {
+		set_country_flag = byz_danube_frontier
+		prestige = 20
+		badboy = 5
+		SER_794 = { add_core = BYZ }
+		TUR_788 = { add_core = BYZ }
+		AUS_781 = { add_core = BYZ }
+		}
+	}
 	byz_anatolian_reconquest = {
 	picture = "population_to_turkey"
 	alert = yes
@@ -110,6 +133,188 @@ political_decisions = {
 		badboy = 5
 		TUR_882 = { add_core = BYZ }
 		RUS_964 = { add_core = BYZ }
+		}
+	}
+	byz_final_anatolia = {
+	picture = "christian_question_armenia"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_black_sea
+		has_country_flag = byz_anatolian_reconquest
+		NOT = { has_country_flag = final_anatolia }
+		}
+	allow = {
+		owns = 882
+		owns = 876
+		owns = 873
+		}
+	effect = {
+		set_country_flag = final_anatolia
+		prestige = 35
+		badboy = 8
+		TUR_894 = { add_core = BYZ }
+		TUR_893 = { add_core = BYZ }
+		TUR_890 = { add_core = BYZ }
+		TUR_885 = { add_core = BYZ }
+		}
+	}
+	byz_levant = {
+	picture = "map_arabia"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = final_anatolia
+		NOT = { has_country_flag = byz_levant }
+		}
+	allow = {
+		owns = 900
+		}
+	effect = {
+		set_country_flag = byz_levant
+		prestige = 30
+		badboy = 5
+		EGY_897 = { add_core = BYZ }
+		EGY_915 = { add_core = BYZ }
+		EGY_903 = { add_core = BYZ }
+		EGY_910 = { add_core = BYZ }
+		EGY_921 = { add_core = BYZ }
+		}
+	}
+	byz_egypt = {
+	picture = "cairo"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_levant
+		NOT = { has_country_flag = byz_egypt }
+		}
+	allow = {
+		owns = 897
+		owns = 903
+		owns = 915
+		owns = 903
+		owns = 910
+		owns = 921
+		}
+	effect = {
+		set_country_flag = byz_egypt
+		prestige = 50
+		badboy = 10
+		EGY_1755 = { add_core = BYZ }
+		EGY_1758 = { add_core = BYZ }
+		EGY_1751 = { add_core = BYZ }
+		EGY_1771 = { add_core = BYZ }
+		EGY_1762 = { add_core = BYZ }
+		EGY_1745 = { add_core = BYZ }
+		}
+	}
+	byz_libya = {
+	picture = "cairo"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_egypt
+		NOT = { has_country_flag = byz_libya }
+		}
+	allow = {
+		owns = 1755
+		owns = 1751
+		owns = 1771
+		owns = 1745
+		owns = 1762
+		}
+	effect = {
+		set_country_flag = byz_libya
+		prestige = 25
+		badboy = 3
+		TRI_1731 = { add_core = BYZ }
+		TRI_1740 = { add_core = BYZ }
+		TUN_1726 = { add_core = BYZ }
+		TRI_1735 = { add_core = BYZ }
+		}
+	}
+	byz_sicily = {
+	picture = "spanish_sicily"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_libya
+		NOT = { has_country_flag = byz_sicily }
+		}
+	allow = {
+		owns = 1731
+		owns = 1740
+		owns = 1726
+		}
+	effect = {
+		set_country_flag = byz_sicily
+		prestige = 30
+		badboy = 5
+		SIC_763 = { add_core = BYZ }
+		SAR_765 = { add_core = BYZ }
+		}
+	}
+	byz_southern_italy = {
+	picture = "spanish_sicily"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_sicily
+		NOT = { has_country_flag = byz_southern_italy }
+		}
+	allow = {
+		owns = 763
+		}
+	effect = {
+		set_country_flag = byz_southern_italy
+		prestige = 30
+		badboy = 10
+		SIC_754 = { add_core = BYZ }
+		SIC_753 = { add_core = BYZ }
+		}
+	}
+	byz_italy_final = {
+	picture = "italy_koi"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_southern_italy
+		NOT = { has_country_flag = byz_final }
+		}
+	allow = {
+		owns = 763
+		owns = 753
+		owns = 754
+		}
+	effect = {
+		set_country_flag = byz_final
+		prestige = 50
+		badboy = 10
+		PAP_752 = { add_core = BYZ }
+		PAP_741 = { add_core = BYZ }
+		TUS_744 = { add_core = BYZ }
+		}
+	}
+	byz_belisarius = {
+	picture = "italy_koi"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_final
+		NOT = { has_country_flag = byz_belisarius }
+		}
+	allow = {
+		owns = 794	
+		owns = 783
+		owns = 781
+		}
+	effect = {
+		SAR_720 = { add_core = BYZ }
+		AUS_726 = { add_core = BYZ }
+		AUS_729 = { add_core = BYZ }
+		AUS_736 = { add_core = BYZ }
+		AUS_733 = { add_core = BYZ }
 		}
 	}
 }
