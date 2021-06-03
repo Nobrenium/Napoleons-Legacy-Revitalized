@@ -45,6 +45,8 @@ political_decisions = {
 		potential = {
 			ideological_thought = 1
 			tag = ASY
+			NOT = { has_country_flag = assyrian_genocide_one }
+			NOT = { has_country_flag = homeland_cleansing }
 			}
 		allow = {
 			war = no
@@ -55,7 +57,7 @@ political_decisions = {
 			}
 		effect = {
 			ASY = {create_vassal = IRQ}
-			901 = {{secede_province = IRQ} 
+			IRQ = {secede_province = 901)
 			add_core = {IRQ}}
 			badboy = 20
 			prestige = -2
