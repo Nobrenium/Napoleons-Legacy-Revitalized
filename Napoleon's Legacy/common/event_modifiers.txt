@@ -2481,8 +2481,8 @@ force_assimilation = {
     icon = 19
 }
 assyrian_revival = {
-    global_population_growth = 0.03
-    assimilation_rate = 2.5
+    population_growth = 0.01
+    assimilation_rate = 2.0
     icon = 17
 }
 metternich = {
