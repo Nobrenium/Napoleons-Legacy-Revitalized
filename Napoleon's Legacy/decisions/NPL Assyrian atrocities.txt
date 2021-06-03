@@ -38,6 +38,7 @@ political_decisions = {
 			}
 	}
 }
+}
 	move_the_arabs = {
 	picture = population_to_turkey
 	alert = yes
