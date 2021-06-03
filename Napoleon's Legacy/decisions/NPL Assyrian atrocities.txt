@@ -57,8 +57,8 @@ political_decisions = {
 			}
 		effect = {
 			ASY = {create_vassal = IRQ}
-			IRQ = {secede_province = 901)
-			add_core = {IRQ}}
+			IRQ = {secede_province = 901}
+			901 = {add_core = {IRQ}}
 			badboy = 20
 			prestige = -2
 			set_country_flag = homeland_cleansing
