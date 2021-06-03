@@ -66,27 +66,33 @@ political_decisions = {
 			remove_core = IRQ
 			any_pop = {
 				limit = { is_culture_group = turko_semitic 
+				OR = {
 				type = soldiers
 				type = farmers
 				type = labourers}
+				}
 				move_pop = 901
 				militancy = 4
 				consciousness = 8
 				} 
 			any_pop = {
 				limit = { is_culture_group = levantine 
+				OR = {
 				type = soldiers
 				type = farmers
 				type = labourers}
+				}
 				move_pop = 901
 				militancy = 4
 				consciousness = 8
 				}
 			any_pop = {
 				limit = { is_culture_group = arab 
-					type = soldiers
-					type = farmers
-					type = labourers}
+				OR = {
+				type = soldiers
+				type = farmers
+				type = labourers}
+				}
 				move_pop = 901
 				militancy = 4
 				consciousness = 8
