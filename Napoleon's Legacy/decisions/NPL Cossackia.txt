@@ -1,0 +1,40 @@
+political_decisions = {
+	cossacks_of_caucasus = {
+	picture = "alexander_emancipating"
+	alert = yes
+	potential = {
+		tag = DON
+		NOT = { has_country_flag = cossack_caucasus }
+		}
+	allow = {
+		owns = 1051
+		owns = 967
+		}
+	effect = {
+		set_country_flag = cossack_caucasus
+		prestige = 20
+		badboy = 3
+		RUS_1052 = { add_core = DON }
+		RUS_1090 = { add_core = DON }
+		}
+	}
+	cossacks_west = {
+	picture = "alexander_emancipating"
+	alert = yes
+	potential = {
+		tag = DON
+		NOT = { has_country_flag = cossack_west }
+		}
+	allow = {
+		state_n_government = 1
+		}
+	effect = {
+		badboy = 3
+		set_country_flag = cossack_west
+		prestige = 22
+		RUS_968 = { add_core = DON }
+		MOL_676 = { add_core = DON }
+		RUS_959 = { add_core = DON }
+		}
+	}
+}
