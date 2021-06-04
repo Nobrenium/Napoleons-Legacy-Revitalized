@@ -80,7 +80,6 @@ political_decisions = {
 				consciousness = 8
 				}
 			}
-			seced
 			release_vassal = IRQ
 	}
 }
