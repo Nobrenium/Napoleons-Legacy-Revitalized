@@ -274,27 +274,29 @@ country_event = {
 country_event = {
 	id = 00040
 	title = "EVTNAME00040"
-	desc = EVTDESC00040"
+	desc = "EVTDESC00040"
 	fire_only_once = yes
 	trigger = {
 	tag = AUS
 	has_global_flag = ita_ind_war	
 	has_country_flag = ferdinand_stays
-	}
 	NOT = { has_global_flag = koi_free }
 	owns = 726
-	}
+		}
 	mean_time_to_happen = { months = 3 }
 	option = {
 	name = "EVTOPTA00040"
 	prestige = 30
 	set_country_flag = italy_defeated
 	any_owned = {
-	limit = {
+		limit = { OR = {
 		is_core = AUS
-		}
+		pop_majority_culture = south_german
+			}	}
+	NOT = { pop_majority_culture = north_italian }
 	remove_core = KOI
 		}
 	release_vassal = KOI
 	}
+}
 }

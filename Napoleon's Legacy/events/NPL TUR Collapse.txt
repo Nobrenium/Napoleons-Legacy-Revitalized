@@ -937,7 +937,7 @@ country_event = {
 	tag = TUR
 	has_global_flag = sick_man_down
 	}
-	mean_time_to_happen = { days = 15 }
+	mean_time_to_happen = { days = 30 }
 	option = {
 	name = "EVTOPTA00033"
 	prestige = -20
@@ -1012,4 +1012,110 @@ country_event = {
 			secede_province = EGY
 		}
 	}
+}
+country_event = {
+	id = 00041
+	title = "EVTNAME00041"
+	desc = "EVTDESC00041"
+	fire_only_once = yes
+	trigger = {
+	tag = TUR
+	has_global_flag = sick_man_down
+	}
+	mean_time_to_happen = { days = 50 }
+	option = {
+	name = "EVTOPTA00041"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = PNT
+			}
+			secede_province = PNT
+		}
+	}
+	option = {
+	name = "EVTOPTB00041"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = PNT
+			}
+			secede_province = PNT
+		}
+	change_tag_no_core_switch = PNT
+	}
+}
+country_event = {
+	id = 00042
+	title = "EVTNAME00042"
+	desc = "EVTDESC00042"
+	fire_only_once = yes
+	trigger = {
+	tag = TUR
+	has_global_flag = sick_man_down
+	}
+	mean_time_to_happen = { days = 90 }
+	option = {
+	name = "EVTOPTA00042"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = TUR
+			}
+			add_core = HTY
+		}
+	any_owned = {
+		limit = {
+			OR = {
+				province_id = 875
+				province_id = 895
+				province_id = 873
+				province_id = 874
+				province_id = 866
+				province_id = 878
+				province_id = 879
+				province_id = 871
+				province_id = 872
+				}
+			}
+			secede_province = HTY
+		war = {
+			target = HTY
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = annex_core_country }
+			}
+	}
+}
+	option = {
+	name = "EVTOPTB00042"
+	prestige = -20
+	any_owned = {
+		limit = {
+			is_core = TUR
+			}
+			add_core = HTY
+		}
+	any_owned = {
+		limit = {
+			OR = {
+				province_id = 875
+				province_id = 895
+				province_id = 873
+				province_id = 874
+				province_id = 866
+				province_id = 878
+				province_id = 879
+				province_id = 871
+				province_id = 872
+				}
+			}
+			secede_province = HTY
+	}
+	war = {
+	target = HTY
+	attacker_goal = { casus_belli = annex_core_country }
+	defender_goal = { casus_belli = annex_core_country }
+		}
+	change_tag_no_core_switch = HTY
+}
 }
