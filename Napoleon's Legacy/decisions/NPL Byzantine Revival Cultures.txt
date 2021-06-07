@@ -1,0 +1,87 @@
+political_decisions = {
+	accept_armenians = {
+	picture = "constantinople"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = final_anatolia
+		NOT = { has_country_flag = accept_armenians }
+		}
+	allow = {
+		owns = 894
+		owns = 893
+		owns = 890
+		owns = 885
+		state_n_government = 1
+		}
+	effect = {
+		prestige = 30
+		set_country_flag = accept_armenians
+		add_accepted_culture = armenian
+		}
+	}
+	accept_assyrians = {
+	picture = "greater_assyria"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_levant
+		NOT = { has_country_flag = accept_assyrians }
+		}
+	allow = {
+		owns = 897
+		owns = 903
+		owns = 915
+		owns = 910
+		owns = 921
+		nationalism_n_imperialism = 1
+		}
+	effect = { 
+		set_country_flag = accept_assyrians
+		add_accepted_culture = assyrian
+		prestige = 35
+		}
+	}
+	accept_albanians = {
+	picture = "greater_albania"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = final_anatolia
+		NOT = { has_country_flag = accept_albanians }
+		}
+	allow = {
+		owns = 894
+		owns = 893
+		owns = 890
+		owns = 885
+		state_n_government = 1
+		}
+	effect = {
+		set_country_flag = accept_albanians
+		add_accepted_culture = albanian
+		prestige = 25
+		}
+	}
+	accept_serbians = {
+	picture = "form_yugoslavia"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_egypt
+		NOT = { has_country_flag = accept_serbians }
+		}
+	allow = {
+		owns = 1755
+		owns = 1751
+		owns = 1771
+		owns = 1745
+		owns = 1762
+		nationalism_n_imperialism = 1
+		}
+	effect = {
+		set_country_flag = accept_serbians
+		add_accepted_culture = serbian
+		}
+	}
+}
