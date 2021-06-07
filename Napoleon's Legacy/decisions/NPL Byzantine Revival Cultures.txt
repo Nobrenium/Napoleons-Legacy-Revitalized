@@ -32,7 +32,6 @@ political_decisions = {
 		owns = 897
 		owns = 903
 		owns = 915
-		owns = 910
 		owns = 921
 		nationalism_n_imperialism = 1
 		}
@@ -82,6 +81,27 @@ political_decisions = {
 	effect = {
 		set_country_flag = accept_serbians
 		add_accepted_culture = serbian
+		}
+	}
+	accept_copts = {
+	picture = "cairo"
+	alert = yes
+	potential = {
+		tag = BYZ
+		has_country_flag = byz_egypt
+		NOT = { has_country_flag = accept_copts }
+		}
+	allow = {
+		owns = 1755
+		owns = 1751
+		owns = 1771
+		owns = 1745
+		owns = 1762
+		state_n_government = 1
+		}
+	effect = {
+		set_country_flag = accept_copts
+		add_accepted_culture = coptic
 		}
 	}
 }
