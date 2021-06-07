@@ -81,6 +81,24 @@ political_decisions = {
 				consciousness = 8
 				}
 			any_pop = {
+				limit = { is_culture_group = arab
+				OR = {
+				type = artisans
+				}
+				}
+				move_pop = 1746
+				militancy = 4
+				consciousness = 8
+				}
+			any_pop = {
+				limit = { is_culture_group = turko_semitic
+				type = artisans
+				}
+				move_pop = 2414
+				militancy = 4
+				consciousness = 8
+				}
+			any_pop = {
 				limit = { is_culture_group = arab 
 				OR = {
 				type = labourers
