@@ -53,8 +53,6 @@ political_decisions = {
 			owns = 932
 			}
 		effect = {
-			901 = { secede_province = IRQ }
-			901 = { add_core = IRQ }
 			badboy = 20
 			prestige = -2
 			set_country_flag = homeland_cleansing
@@ -67,7 +65,7 @@ political_decisions = {
 				type = farmers
 				type = labourers}
 				}
-				move_pop = 901
+				move_pop = 893
 				militancy = 4
 				consciousness = 8
 				} 
@@ -78,7 +76,7 @@ political_decisions = {
 				type = farmers
 				type = labourers}
 				}
-				move_pop = 901
+				move_pop = 914
 				militancy = 4
 				consciousness = 8
 				}
