@@ -46,11 +46,14 @@ political_decisions = {
 			ideological_thought = 1
 			tag = ASY
 			NOT = { has_country_flag = assyrian_genocide_one has_country_flag = homeland_cleansing }
+			}
 		allow = {
 			war = no
 			owns = 926
 			owns = 932
+			}
 		effect = {
+			901 = { secede_province = IRQ }
 			901 = {add_core = IRQ}
 			badboy = 20
 			prestige = -2
@@ -80,7 +83,6 @@ political_decisions = {
 				consciousness = 8
 				}
 			}
-			release_vassal = IRQ
 	}
 }
 }
