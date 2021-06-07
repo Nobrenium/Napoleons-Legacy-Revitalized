@@ -72,9 +72,19 @@ political_decisions = {
 			any_pop = {
 				limit = { is_culture_group = arab 
 				OR = {
-				type = soldiers
 				type = farmers
-				type = labourers}
+				type = soldiers
+				}
+				}
+				move_pop = 913
+				militancy = 4
+				consciousness = 8
+				}
+			any_pop = {
+				limit = { is_culture_group = arab 
+				OR = {
+				type = labourers
+				}
 				}
 				move_pop = 914
 				militancy = 4
