@@ -481,7 +481,7 @@
     soldiers = {
         culture = assyrian
         religion = catholic
-        size = 100
+        size = 300
     }
 
     clergymen = {
@@ -622,6 +622,12 @@
         culture = bedouin
         religion = sunni
         size = 75
+    }
+
+    farmers = {
+        culture = assyrian
+        religion = catholic
+        size = 100
     }
 
     farmers = {
@@ -825,7 +831,13 @@
         religion = shiite
         size = 1300
     }
-
+    
+    farmers = {
+        culture = assyrian
+        religion = catholic
+        size = 200
+    }
+    
     farmers = {
         culture = mashriqi
         religion = shiite
@@ -850,6 +862,12 @@
         culture = bedouin
         religion = sunni
         size = 200
+    }
+    
+    soldiers = {
+        culture = assyrian
+        religion = catholic
+        size = 100
     }
 
     soldiers = {
