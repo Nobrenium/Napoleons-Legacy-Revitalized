@@ -90,6 +90,7 @@ political_decisions = {
 				militancy = 4
 				consciousness = 8
 				}
+				add_province_modifier = { name = assyrian_revival duration = 3600 }
 			}
 	}
 }
