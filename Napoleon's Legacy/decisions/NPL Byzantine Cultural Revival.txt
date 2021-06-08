@@ -1,0 +1,34 @@
+political_decisions = {
+	constantinople_is_ours = {
+	picture = "population_to_turkey"
+	alert = yes
+		potential = {
+			tag = BYZ
+			has_global_flag = byz_restored
+			NOT = { has_country_flag = const_purge }
+			}
+		allow = {
+			war = no
+			owns = 860
+			}
+		effect = {
+			badboy = 5
+			prestige = 30
+			set_country_flag = const_purge
+			BYZ = { any_owned = { limit = { OR = { is_core = BYZ province_id = 860 province_id = 865 province_id = 830 province_id = 858 province_id = 828 province_id = 859 province_id = 861 }
+			any_pop = {
+				limit = { is_culture_group = turko_semitic }
+				reduce_pop = 0.20
+				militancy = 9
+				consciousness = 4
+				}
+			any_pop = {
+				limit = { is_culture_group = levantine }
+				reduce_pop = 3.00
+				militancy = -9
+				consciousness = -9
+				}
+			}
+		}
+	}
+}
