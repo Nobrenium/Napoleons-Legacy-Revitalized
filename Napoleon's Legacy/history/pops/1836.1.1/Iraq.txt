@@ -148,14 +148,20 @@
 
     artisans = {
         culture = assyrian
-        religion = catholic
+        religion = orthodox
         size = 1100
     }
 
     farmers = {
         culture = assyrian
         religion = catholic
-        size = 17325
+        size = 10525
+    }
+    
+    farmers = {
+        culture = assyrian
+        religion = orthodox
+        size = 9975
     }
 
     slaves = {
@@ -276,8 +282,13 @@
 
     farmers = {
         culture = assyrian
+        religion = orthodox
+        size = 4045
+    }
+    farmers = {
+        culture = assyrian
         religion = catholic
-        size = 4775
+        size = 775
     }
 }
 #Kirkuk (160000/40000 POPS)
@@ -386,8 +397,14 @@
 
     farmers = {
         culture = assyrian
-        religion = catholic
+        religion = orthodox
         size = 1750
+    }
+    
+    farmers = {
+        culture = assyrian
+        religion = protestant
+        size = 350
     }
 }
 #Iraq Region (644000)
@@ -750,6 +767,12 @@
         culture = assyrian
         religion = catholic
         size = 825
+    }
+    
+    farmers = {
+        culture = assyrian
+        religion = orthodox
+        size = 935
     }
 }
 #Karbala (100000/25000 POPS)
