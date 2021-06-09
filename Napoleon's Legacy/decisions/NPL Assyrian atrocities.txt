@@ -62,8 +62,7 @@ political_decisions = {
 				limit = { is_culture_group = turko_semitic 
 				OR = {
 				type = soldiers
-				type = farmers
-				type = labourers}
+				type = farmers}
 				}
 				move_pop = 893
 				militancy = 4
@@ -84,6 +83,7 @@ political_decisions = {
 				limit = { is_culture_group = arab
 				OR = {
 				type = artisans
+				type = labourers
 				}
 				}
 				move_pop = 1746
