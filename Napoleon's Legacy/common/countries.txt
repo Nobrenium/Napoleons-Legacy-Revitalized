@@ -27,6 +27,7 @@ FED        ="countries/Federation of the Rhine.txt"
 AFA        ="countries/The Coalition of Nations.txt"
 LOU        ="countries/Louisiana.txt"
 KOI        ="countries/Kingdom of Italy.txt"
+LTN	   ="countries/LatinEmpire.txt"
 
 ##HPM
 PNK        ="countries/Pontianak.txt"
