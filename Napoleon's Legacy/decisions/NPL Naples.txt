@@ -61,14 +61,54 @@ political_decisions = {
 		NOT = { has_country_flag = naples_to_latins }
 		}
 	allow = {
-		empericism = 1
+		idealism = 1
 		prestige = 175
-		set_country_flag = naples_to_latins
 		}
 	effect = {
 		all_owned = { limit = { is_core = SIC } add_core = LTN }
 		prestige = 50
 		change_tag = LTN 
+		set_country_flag = naples_to_latins
+		}
+	}
+	latin_greece = {
+	alert = yes
+	potential = {
+		tag = LTN
+		owns = 860
+		NOT = { has_country_flag = latin_greece }
+		}
+	allow = {
+		empiricism = 1
+		prestige = 200
+		}
+	effect = {
+		badboy = 10
+		set_country_flag = latin_greece
+		TUR_809 = { add_core = LTN }
+		TUR_823 = { add_core = LTN }
+		TUR_832 = { add_core = LTN }
+		TUR_805 = { add_core = LTN }
+		TUR_855 = { add_core = LTN }
+	}
+}
+	latin_separate_state = {
+	alert = yes
+	potential = {
+		tag = LTN
+		owns = 860
+		NOT = { has_country_flag = latin_separate_state }
+		}
+	allow = { 
+		tag = LTN
+		owns = 860
+		}
+	effect = {
+		set_country_flag = latin_separate_state
+		GRE_826 = { remove_core = SIC }
+		GRE_837 = { remove_core = SIC }
+		EGY_843 = { remove_core = SIC }
+		TUR_860 = { remove_core = SIC }
 		}
 	}
 }
