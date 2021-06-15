@@ -1,1 +1,49 @@
+political_decisions = {
 
+    go_with_the_orthodox_church = {
+        potential = {
+            NOT = {
+                has_country_flag = catholic_church_support
+            }
+        }
+        allow = {
+            iron_railroad = 1
+            puddling = 1
+        }
+        effect = {
+           religion = orthodox
+           ASY = { any_owned = { limit = { is_core = ASY }
+			     any_pop = {
+				   limit = { pop_majority_religion = catholic 
+           type = aristocrats
+           }
+           religion = orthodox
+           }
+           prestige = 25
+           set_country_flag = orthodox_church_support
+        }
+    }
+    go_with_the_catholic_church = {
+        potential = {
+            NOT = {
+                has_country_flag = orthodox_church_support
+            }
+        }
+        allow = {
+            iron_railroad = 1
+            puddling = 1
+        }
+        effect = {
+           religion = catholic
+           ASY = { any_owned = { limit = { is_core = ASY }
+			     any_pop = {
+				   limit = { pop_majority_religion = orthodox 
+           type = aristocrats
+           }
+           religion = catholic
+           }
+           prestige = 25
+           set_country_flag = catholic_church_support
+        }
+    }
+}
