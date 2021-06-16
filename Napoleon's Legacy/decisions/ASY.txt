@@ -2,6 +2,7 @@ political_decisions = {
 
     go_with_the_orthodox_church = {
         potential = {
+	tag = ASY
             NOT = {
                 has_country_flag = catholic_church_support
             }
@@ -23,8 +24,10 @@ political_decisions = {
            set_country_flag = orthodox_church_support
         }
     }
+    }
     go_with_the_catholic_church = {
         potential = {
+	tag = ASY
             NOT = {
                 has_country_flag = orthodox_church_support
             }
