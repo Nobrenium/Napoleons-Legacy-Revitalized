@@ -26,4 +26,17 @@ political_decisions = {
     }
     }
 }
+	renovate_baghdad = {
+	alert = yes
+		potential = {
+			tech_infastructure = 2
+			owns = 926
+			}
+		allow = {
+			owns = 926
+			}
+		effect = {
+		926 = { life_rating = 5 }
+}
+}
 }
