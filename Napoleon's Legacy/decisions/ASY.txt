@@ -31,6 +31,7 @@ political_decisions = {
 		potential = {
 			tech_infastructure = 2
 			owns = 926
+			money = 50000
 			NOT = {
                		has_country_flag = renovated_baghdad
             		}
@@ -41,6 +42,7 @@ political_decisions = {
 		effect = {
 		926 = { life_rating = 5 }
 		set_country_flag = renovated_baghdad
+		treasury = -50000
 }
 }
 }
