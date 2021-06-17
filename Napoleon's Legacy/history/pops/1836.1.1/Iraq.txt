@@ -1166,6 +1166,11 @@
         religion = shiite
         size = 50
     }
+    soldiers = {
+        culture = assyrian
+        religion = orthodox
+        size = 50
+    }
 
     farmers = {
         culture = bedouin
