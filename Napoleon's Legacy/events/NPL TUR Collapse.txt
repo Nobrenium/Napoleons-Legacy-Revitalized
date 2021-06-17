@@ -900,7 +900,7 @@ country_event = {
 	tag = TUR
 	has_global_flag = sick_man_down
 	}
-	mean_time_to_happen = { days = 15 }
+	mean_time_to_happen = { days = 5 }
 	option = {
 	name = "EVTOPTA00032"
 	prestige = -20
@@ -938,7 +938,7 @@ country_event = {
 	tag = TUR
 	has_global_flag = sick_man_down
 	}
-	mean_time_to_happen = { days = 30 }
+	mean_time_to_happen = { days = 35 }
 	option = {
 	name = "EVTOPTA00033"
 	prestige = -20
