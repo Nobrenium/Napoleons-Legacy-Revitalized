@@ -148,6 +148,7 @@ political_decisions = {
 				}
 			any_pop = {
 				limit = { is_culture_group = iranian_turanian
+				OR = {
 				type = soldiers
 				type = artisans
 				type = farmers
