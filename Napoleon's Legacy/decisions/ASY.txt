@@ -1,5 +1,25 @@
 political_decisions = {
 
+	remove_iraq_cores = {
+	picture = population_to_turkey
+	alert = yes
+		potential = {
+			ideological_thought = 1
+			tag = ASY
+			ASY = { any_owned = { is_core = IRQ } } 
+			}
+		allow = {
+			war = no
+			}
+		effect = {
+			badboy = 15
+			set_country_flag = assyrian_persian_relocation
+			ASY = { any_owned = { limit = { is_core = IRQ }
+			remove_core = IRQ
+	}
+	}
+	}
+}
     go_with_the_orthodox_church = {
         potential = {
 	tag = ASY
