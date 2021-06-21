@@ -2487,7 +2487,7 @@ assyrian_revival = {
 }
 assyrian_colonization = {
     population_growth = 0.01
-    assimilation_rate = 2.0
+    assimilation_rate = 4
     immigrant_attract = 3
     icon = 17
 }
