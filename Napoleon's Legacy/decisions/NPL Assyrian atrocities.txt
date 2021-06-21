@@ -112,6 +112,7 @@ political_decisions = {
 			}
 	}
 }
+}
 	open_khuzestan_for_settlement = {
 	picture = population_to_turkey
 	alert = yes
@@ -119,6 +120,7 @@ political_decisions = {
 			ideological_thought = 1
 			tag = ASY
 			NOT = { has_country_flag = assyrian_persian_relocation
+			}
 			}
 		allow = {
 			war = no
@@ -154,5 +156,7 @@ political_decisions = {
 				consciousness = 8
 				}
 	}
+}
+}
 }
 }
