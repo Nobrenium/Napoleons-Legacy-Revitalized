@@ -113,6 +113,26 @@ political_decisions = {
 	}
 }
 }
+	remove_iraq_cores = {
+	picture = population_to_turkey
+	alert = yes
+		potential = {
+			ideological_thought = 1
+			tag = ASY
+			ASY = { any_owned = { is_core = IRQ } } 
+			}
+		allow = {
+			war = no
+			}
+		effect = {
+			badboy = 15
+			set_country_flag = assyrian_persian_relocation
+			ASY = { any_owned = { limit = { is_core = IRQ }
+			remove_core = IRQ
+	}
+}
+}
+}
 	open_khuzestan_for_settlement = {
 	picture = population_to_turkey
 	alert = yes
@@ -153,6 +173,7 @@ political_decisions = {
 				type = soldiers
 				type = artisans
 				type = farmers
+				}
 				}
 				move_pop = 1133
 				militancy = 4
