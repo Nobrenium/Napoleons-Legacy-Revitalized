@@ -1,7 +1,6 @@
 political_decisions = {
 
 	remove_iraq_cores = {
-    	picture = population_to_turkey
   	alert = yes
         potential = {
             ideological_thought = 1
