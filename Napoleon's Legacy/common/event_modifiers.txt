@@ -2485,6 +2485,12 @@ assyrian_revival = {
     assimilation_rate = 2.0
     icon = 17
 }
+assyrian_colonization = {
+    population_growth = 0.01
+    assimilation_rate = 2.0
+    immigrant_attract = 0.5
+    icon = 17
+}
 metternich = {
     prestige = 0.02
     core_pop_militancy_modifier = 0.03
