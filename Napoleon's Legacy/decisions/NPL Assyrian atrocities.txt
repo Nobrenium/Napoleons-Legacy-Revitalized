@@ -112,4 +112,47 @@ political_decisions = {
 			}
 	}
 }
+	open_khuzestan_for_settlement = {
+	picture = population_to_turkey
+	alert = yes
+		potential = {
+			ideological_thought = 1
+			tag = ASY
+			NOT = { has_country_flag = assyrian_persian_relocation
+			}
+		allow = {
+			war = no
+			owns = 1132
+			owns = 1133
+			}
+		effect = {
+			badboy = 15
+			set_country_flag = assyrian_persian_relocation
+			ASY = { any_owned = { limit = { is_core = PER }
+			remove_core = PER
+			add_province_modifier = { name = assyrian_colonization duration = 3600 }
+			any_pop = {
+				limit = { is_culture_group = arab
+				OR = {
+				type = artisans
+				type = farmers
+				type = soldiers
+				}
+				}
+				move_pop = 1178
+				militancy = 4
+				consciousness = 8
+				}
+			any_pop = {
+				limit = { is_culture_group = iranian_turanian
+				type = soldiers
+				type = artisans
+				type = farmers
+				}
+				move_pop = 1133
+				militancy = 4
+				consciousness = 8
+				}
+	}
+}
 }
