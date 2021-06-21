@@ -132,6 +132,7 @@ political_decisions = {
 			set_country_flag = assyrian_persian_relocation
 			ASY = { any_owned = { limit = { is_core = PER }
 			remove_core = PER
+			remove_core = IRQ
 			add_core = ASY
 			add_province_modifier = { name = assyrian_colonization duration = 3600 }
 			any_pop = {
