@@ -127,10 +127,78 @@ political_decisions = {
 		}
 	effect = {
 		set_country_flag = latin_italy
+		badboy = 10
+		prestige = 50
 		PAP_752 = { add_core = LTN }
 		TUS_744 = { add_core = LTN }
 		PAP_741 = { add_core = LTN }
 		SAR_765 = { add_core = LTN }
+		}
+	}
+	latin_triumph_balkans = {
+	alert = yes
+	potential = {
+		tag = LTN
+		NOT = { has_country_flag = latin_balkans }
+		owns = 809
+		owns = 823
+		owns = 832
+		owns = 805
+		owns = 855
+		}
+	allow = {
+		prestige = 350
+		}
+	effect = {
+		set_country_flag = latin_balkans
+		badboy = 10
+		prestige = 50
+		TUR_810 = { add_core = LTN }
+		TUR_806 = { add_core = LTN }
+		TUR_674 = { add_core = LTN }
+		}
+	}
+	latin_triumph_asia = {
+	potential = {
+		tag = LTN
+		NOT = { has_country_flag = latin_asia }
+		owns = 809
+		owns = 823
+		owns = 832
+		owns = 805
+		owns = 855
+		}
+	allow = {
+		prestige = 400
+		}
+	effect = {
+		set_country_flag = latin_asia
+		badboy = 5
+		prestige = 25
+		TUR_863 = { add_core = LTN }
+		TUR_869 = { add_core = LTN }
+		}
+	}
+	true_legacy_rome = {
+	alert = yes
+	potential = {
+		tag = LTN
+		is_greater_power = yes
+		NOT = { has_country_flag = true_rome_legacy }
+		prestige = 800
+		}
+	allow = {
+		owns = 863
+		owns = 869
+		owns = 810
+		owns = 806
+		owns = 741
+		owns = 752
+		}
+	effect = {
+		prestige = 500
+		badboy = -25
+		set_country_flag = true_rome_legacy 
 		}
 	}
 }
