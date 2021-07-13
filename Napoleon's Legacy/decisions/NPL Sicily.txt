@@ -1,0 +1,38 @@
+political_decisions = {
+	kingdom_of_two_sicilies = {
+	alert = yes
+	potential = {
+		tag = SYC
+		NOT = { has_country_flag = two_sicilies }
+		owns = 754
+		owns = 753
+		}
+	allow = {
+		prestige = 50
+		state_n_government = 1
+		}
+	effect = {
+		SAR_765 = { add_core = SYC }
+		set_country_flag = two_sicilies
+		prestige = 15
+		badboy = 5
+		}
+	}
+	sicilian_tunis = {
+	alert = yes
+	potential = {
+		tag = SYC
+		NOT = { has_country_flag = sicily_tunis }
+		owns = 765
+		}
+	allow = {
+		prestige = 75
+		}
+	effect = {
+		TUN_1726 = { add_core = SYC }
+		set_country_flag = sicily_tunis
+		badboy = 5
+		prestige = 15
+		}
+	}
+}
