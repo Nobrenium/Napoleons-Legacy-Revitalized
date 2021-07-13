@@ -3,7 +3,7 @@ political_decisions = {
 	remove_iraq_cores = {
 	alert = yes
 	potential = {
-	any_owned = { is_core = IRQ }
+	OR = { AND = { owns = 1132 1132 = { is_core = IRQ } } AND = { owns = 934 1132 = { is_core = IRQ } } } 
 	}
 	allow = { ideological_thought = 1 }
 	effect = { 
