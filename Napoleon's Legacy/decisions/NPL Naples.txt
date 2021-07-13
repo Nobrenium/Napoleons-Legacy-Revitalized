@@ -90,8 +90,8 @@ political_decisions = {
 		TUR_832 = { add_core = LTN }
 		TUR_805 = { add_core = LTN }
 		TUR_855 = { add_core = LTN }
+		}
 	}
-}
 	latin_separate_state = {
 	alert = yes
 	potential = {
@@ -109,6 +109,28 @@ political_decisions = {
 		GRE_837 = { remove_core = SIC }
 		EGY_843 = { remove_core = SIC }
 		TUR_860 = { remove_core = SIC }
+		}
+	}
+	latin_triumph_italy = {
+	alert = yes
+	potential = {
+		tag = LTN
+		NOT = { has_country_flag = latin_italy }
+		owns = 809
+		owns = 823
+		owns = 832
+		owns = 805
+		owns = 855
+		}
+	allow = {
+		prestige = 500
+		}
+	effect = {
+		set_country_flag = latin_italy
+		PAP_752 = { add_core = LTN }
+		TUS_744 = { add_core = LTN }
+		PAP_741 = { add_core = LTN }
+		SAR_765 = { add_core = LTN }
 		}
 	}
 }
