@@ -28,7 +28,7 @@ AFA        ="countries/The Coalition of Nations.txt"
 LOU        ="countries/Louisiana.txt"
 KOI        ="countries/Kingdom of Italy.txt"
 LTN	   ="countries/LatinEmpire.txt"
-
+ARN	   ="countries/Aragon.txt"
 ##HPM
 PNK        ="countries/Pontianak.txt"
 GHN        ="countries/Ghana.txt"
