@@ -22,6 +22,7 @@ political_decisions = {
 		EGY_1758 = { add_core = ASY }
 		EGY_1762 = { add_core = ASY }
 		EGY_1771 = { add_core = ASY }
-		}
+		EGY_921 = { add_core = ASY }
+		EGY_910 = { add_core = ASY }
 	}
 }
