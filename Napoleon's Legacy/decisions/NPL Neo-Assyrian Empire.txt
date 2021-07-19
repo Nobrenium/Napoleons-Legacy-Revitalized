@@ -1,0 +1,27 @@
+political_decisions = {
+	assyrian_egypt = {
+	picture = greater_assyria
+		potential = {
+			tag = ASY
+			NOT = { has_country_flag = assyrian_egypt }
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			is_disarmed = no
+			war_policy = jingoism
+			is_secondary_power = yes
+			}
+		effect = {
+		set_country_flag = assyrian_egypt
+		prestige = 50
+		badboy = 15
+		EGY_1745 = { add_core = ASY }
+		EGY_1755 = { add_core = ASY }
+		EGY_1758 = { add_core = ASY }
+		EGY_1762 = { add_core = ASY }
+		EGY_1771 = { add_core = ASY }
+		}
+	}
+}
