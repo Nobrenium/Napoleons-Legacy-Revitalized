@@ -1,0 +1,99 @@
+political_decisions = {
+	koi_italian_reconquest = {
+	picture = award_order_of_st_francis
+		potential = {
+			tag = KOI
+			NOT = { has_country_flag = koi_italian_reconquest }
+			}
+		allow = {
+			war = no
+			is_vassal = no
+			is_disarmed = no
+			}
+		effect = {
+		set_country_flag = koi_italian_reconquest
+		prestige = 80
+		badboy = 15
+		SAR_720 = { add_core = KOI }
+		TUS_744 = { add_core = KOI }
+		PAP_741 = { add_core = KOI }
+		PAP_752 = { add_core = KOI }
+		SIC_753 = { add_core = KOI }
+		SIC_754 = { add_core = KOI }
+		SIC_763 = { add_core = KOI }
+		}
+	}
+	koi_augustus = {
+		potential = {
+			NOT = { has_country_flag = koi_augustus }
+			OR = {
+			tag = KOI
+			tag = ITM
+			}
+			owns = 749
+			}
+		allow = {
+			is_secondary_power = yes
+			}
+		effect = {
+			prestige = 25
+			set_country_flag = koi_augustus
+			}
+		}
+	koi_irredentia_pannonia = {
+		potential = {
+			tag = ITM
+			owns = 749
+			owns = 720
+			owns = 744
+			owns = 741
+			owns = 752
+			owns = 753
+			owns = 754
+			owns = 763
+			NOT = { has_country_flag = koi_irredentia_pannonia }
+			}
+		allow = {
+			is_secondary_power = yes
+			prestige = 150
+			}
+		effect = {
+			set_country_flag = koi_irredentia_pannonia
+			AUS_733 = { add_core = ITM }
+			AUS_736 = { add_core = ITM }
+			AUS_768 = { add_core = ITM }
+			AUS_771 = { add_core = ITM }
+			AUS_780 = { add_core = ITM }
+			TUR_788 = { add_core = ITM }
+			MON_2582 = { add_core = ITM }
+			TUR_853 = { add_core = ITM }
+			GRE_826 = { add_core = ITM }
+			badboy = 20 
+			}
+		}
+	koi_irredentia_carthaginia = {
+		potential = {
+		tag = ITM
+		owns = 749
+		owns = 720
+		owns = 744
+		owns = 741
+		owns = 752
+		owns = 753
+		owns = 754
+		owns = 763
+		NOT = { has_country_flag = koi_irredentia_carthaginia }
+		}
+		allow = {
+		is_secondary_power = yes
+		prestige = 100
+		}
+		effect = {
+		set_country_flag = koi_irredentia_carthaginia
+		TRI_1735 = { add_core = ITM }
+		TRI_1731 = { add_core = ITM }
+		TUN_1726 = { add_core = ITM }
+		badboy = 5
+		}
+	}
+}

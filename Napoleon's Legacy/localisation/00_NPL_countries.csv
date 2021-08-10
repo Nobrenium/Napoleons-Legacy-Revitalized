@@ -25,7 +25,10 @@ REI_ADJ;Portuguese;;;;;;;;;x;;;;
 PER_absolute_monarchy;Persian Empire;;;;;;;;;;;;;x
 PER_absolute_monarchy_ADJ;Persian;;;;;;;;;;;;;x
 ITA;Italy;;;;;;;;;;;;;x;;;;
-ITM;Italy;;;;;;;;;;;;;x;;;;
+ITM;The Empire of Nova Italia;;;;;;;;;;;;;x;;;;
+ITM_proletarian_dictatorship;The People's Empire of Alpina-Apennina;;;;;;;;;;;;;x;;;;
+ITM_democracy;The Great Republic of Serene Italia;;;;;;;;;;;;;x;;;;
+ITM_fascist_dictatorship;The Sole Empire of Italia;;;;;;;;;;;;;x;;;;
 ITN;Italy;;;;;;;;;;;;;x;;;;
 ITS;Italy;;;;;;;;;;;;;x;;;;
 ITL;Italy;;;;;;;;;;;;;x;;;;
@@ -37,6 +40,7 @@ ITS_ADJ;Italian;;;;;;;;;;;;;x;;;;
 ITL_ADJ;Italian;;;;;;;;;;;;;x;;;;
 KOI;Kingdom of Italy;;;;;;;;;x;;;;
 KOI_democracy;Padania;;;;;;;;;x;;;;
+KOI_proletarian_dictatorship;The People's Kingdom of Alpina;;;;;;;;;;;;;x;;;;
 KOI_ADJ;Italian;;;;;;;;;;;;;x;;;;
 SIC;Naples;;;;;;;;;;;;;x;;;;
 SIC_ADJ;Neapolitan;;;;;;;;;;;;;x;;;;
@@ -132,7 +136,7 @@ UKR_ADJ;Ruthenian;;;;;;;;;x;;;;;;;;
 acadian;Acadian;;;;;;;;;x;;;;;;;;
 rhenish;Rhenish;;;;;;;;;x;;;;;;;;
 ruthenian;Ruthenian;;;;;;;;;x;;;;;;;;
-franco_iberian;Franco Iberian;;;;;;;;;x;;;;;;;;
+franco_iberian;Franco-Iberian;;;;;;;;;x;;;;;;;;
 LTN;Latin Empire;;;;;;;;;x;;;;;;;;
 LTN_democracy;Latin Republic;;;;;;;;;x;;;;;;;;
 LTN_ADJ;Latin;;;;;;;;;x;;;;;;;;
