@@ -96,4 +96,70 @@ political_decisions = {
 		badboy = 5
 		}
 	}
+	koi_irredentia_provencia = {
+		potential = {
+		tag = ITM
+		owns = 749
+		owns = 720
+		owns = 744
+		owns = 741
+		owns = 752
+		owns = 753
+		owns = 754
+		owns = 763
+		NOT = { has_country_flag = koi_irredentia_provencia }
+		}
+		allow = {
+		is_secondary_power = yes
+		prestige = 100
+		}
+		effect = {
+		set_country_flag = koi_irredentia_provencia
+		badboy = 20
+		FRA_467 = { add_core = ITM }
+		FRA_451 = { add_core = ITM }
+		FRA_461 = { add_core = ITM }
+		FRA_448 = { add_core = ITM }
+		FRA_455 = { add_core = ITM }
+		}
+	}
+	koi_irredentia_algeria = {
+		potential = {
+		NOT = { has_country_flag = koi_irredentia_algeria }
+		tag = ITM
+		owns = 1735
+		owns = 1731
+		owns = 1726
+		}
+		allow = {
+		is_secondary_power = yes
+		prestige = 175
+		}
+		effect = {
+		badboy = 8
+		set_country_flag = koi_irredentia_algeria
+		FRA_1700 = { add_core = ITM }
+		ALD_1704 = { add_core = ITM }
+		ALD_1708 = { add_core = ITM }
+		ALD_1713 = { add_core = ITM }
+		}
+	}
+	koi_irredentia_hispania = {	
+		potential = {
+		NOT = { has_country_flag = koi_irredentia_hispania }
+		tag = ITM
+		owns = 1735
+		owns = 1731
+		owns = 1726
+		}
+		allow = {
+		is_secondary_power = yes
+		prestige = 200
+		}
+		effect = {
+		SPA_498 = { add_core = ITM }
+		SPA_503 = { add_core = ITM }
+		SPA_513 = { add_core = ITM }
+		}
+`	}
 }
