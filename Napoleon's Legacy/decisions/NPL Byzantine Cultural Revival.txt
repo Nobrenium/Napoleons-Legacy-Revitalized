@@ -59,4 +59,23 @@ political_decisions = {
 			}
 		}
 	}
+	}
+	rebuild_the_eternal_city = {
+	picture = "hagia_sophia"
+	alert = yes
+		potential = {
+			tag = BYZ
+			owns = 860
+			NOT = { has_country_flag = eternal_city_rebuild }
+			}
+		allow = {
+			money = 100000
+		}
+		effect = {
+		treasury = -100000
+		badboy = -5
+		set_country_flag = eternal_city_rebuild
+		860 = { add_province_modifier = { name = recently_built_city duration = 3650 } 
+		}
+	}
 }
