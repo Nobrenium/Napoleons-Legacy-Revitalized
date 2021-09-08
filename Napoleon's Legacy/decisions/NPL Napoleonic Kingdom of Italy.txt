@@ -157,9 +157,32 @@ political_decisions = {
 		prestige = 200
 		}
 		effect = {
+		set_country_flag = koi_irredentia_hispania
 		SPA_498 = { add_core = ITM }
 		SPA_503 = { add_core = ITM }
 		SPA_513 = { add_core = ITM }
 		}
 `	}
+	koi_irredentia_morocco = {
+		potential = {
+		NOT = { has_country_flag = koi_irredentia_morocco }
+		tag = ITM
+		owns = 1700
+		owns = 1704
+		owns = 1708
+		owns = 1713
+		}
+		allow = {
+		is_secondary_power = yes
+		prestige = 200
+		}
+		effect = {
+		set_country_flag = koi_irredentia_morocco
+		MOR_1693 = { add_core = ITM }
+		MOR_1686 = { add_core = ITM }
+		MOR_1688 = { add_core = ITM }
+		MOR_1683 = { add_core = ITM }
+		MOR_1694 = { add_core = ITM }
+		}
+	}
 }
