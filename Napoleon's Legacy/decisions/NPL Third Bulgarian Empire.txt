@@ -13,10 +13,154 @@ political_decisions = {
 
         effect = {
             set_country_flag = greater_bulgaria_claimed
-            badboy = 15
+            badboy = 10
             TUR_805 = { add_core = BUL } #Southern Macedonia
             TUR_803 = { add_core = BUL } #Southern Serbia
             TUR_860 = { add_core = BUL } #Thrace
         }
     }
+	third_bulgarian_empire = {
+	picture = greater_bulgaria
+	potential = {
+	tag = BUL
+	NOT = { has_country_flag = third_bulgarian_empire }
+	has_country_flag = greater_bulgaria_claimed
+	}
+	allow = {
+	war = no
+	nationalism_n_imperialism = 1
+	owns = 805
+	owns = 803
+	owns = 860
+	}
+	effect = {
+	set_country_flag = third_bulgarian_empire
+	badboy = 10
+	TUR_674 = { add_core = BUL }
+	TUR_832 = { add_core = BUL }
+	TUR_853 = { add_core = BUL }
+	MON_2582 = { add_core = BUL }
+	SER_794 = { add_core = BUL }
+		}
+	}
+	bulgaria_domination_balkans = {
+	picture = greater_bulgaria
+	potential = {
+	tag = BUL
+	NOT = { has_country_flag = bulgaria_domination_balkans }
+	has_country_flag = third_bulgarian_empire
+	}
+	allow = {
+	war = no
+	owns = 674
+	owns = 832
+	owns = 851
+	owns = 2582
+	owns = 794
+	}
+	effect = {
+	set_country_flag = bulgaria_domination_balkans
+	badboy = 10
+	GRE_837 = { add_core = BUL }
+	GRE_826 = { add_core = BUL }
+	TUR_788 = { add_core = BUL }
+		}
+	}
+	bulgaria_romanian_reconquest = {
+	picture = greater_bulgaria 
+	potential = {
+	tag = BUL
+	NOT = { has_country_flag = bulgaria_romanian_reconquest }
+	has_country_flag = third_bulgarian_empire
+	}
+	allow = {
+	war = no
+	nationalism_n_imperialism = 1
+	owns = 674
+	owns = 832
+	owns = 851
+	owns = 2582
+	owns = 794
+	}
+	effect = {
+	set_country_flag = bulgaria_romanian_reconquest
+	badboy = 10
+	WAL_665 = { add_core = BUL }
+	MOL_673 = { add_core = BUL }
+	MOL_676 = { add_core = BUL }
+		}
+	}
+	bulgaria_danubian_frontier = {
+	picture = greater_bulgaria
+	potential = {
+	tag = BUL
+	NOT = { has_country_flag = bulgaria_danubian_frontier }
+	has_country_flag = bulgaria_domination_balkans
+	}
+	allow = {
+	war = no
+	owns = 674
+	owns = 832
+	owns = 851
+	owns = 794
+	owns = 837
+	owns = 826
+	owns = 788
+	}
+	effect = {
+	badboy = 10
+	set_country_flag = bulgaria_danubian_frontier
+	AUS_780 = { add_core = BUL }
+	AUS_771 = { add_core = BUL }
+	AUS_2538 = { add_core = BUL }
+	AUS_652 = { add_core = BUL }
+	AUS_777 = { add_core = BUL }
+	}
+	}
+	bulgaria_romania_restored = {
+	picture = greater_bulgaria
+	potential = {
+	tag = BUL
+	NOT = { has_country_flag = bulgaria_romania }
+	has_country_flag = bulgaria_romanian_reconquest
+	}
+	allow = {
+	war = no
+	owns = 665
+	owns = 673
+	owns = 676
+	}
+	effect = {
+	set_country_flag = bulgaria_romania
+	badboy = 10
+	AUS_654 = { add_core = BUL }
+	AUS_657 = { add_core = BUL }
+	RUS_968 = { add_core = BUL }
+		}
+	}
+	old_bulgharia = {
+	picture = greater_bulgaria
+	potential = {
+	tag = BUL
+	NOT = { has_country_flag = old_bolgharia }
+	has_country_flag = bulgaria_romania
+		}
+	allow = {
+	war = no
+	is_greater_power = yes
+	owns = 654
+	owns = 657
+	owns = 968
+	}
+	effect = {
+	set_country_flag = old_bolgharia
+	badboy = 20
+	RUS_964 = { add_core = BUL }
+	RUS_973 = { add_core = BUL }
+	RUS_955 = { add_core = BUL }
+	RUS_958 = { add_core = BUL }
+	RUS_978 = { add_core = BUL }
+		}
+	}
+	
 }
