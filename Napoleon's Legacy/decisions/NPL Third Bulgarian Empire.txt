@@ -1,0 +1,22 @@
+political_decisions = {
+	greater_bulgaria = {
+	picture = greater_bulgaria
+        potential = {
+            tag = BUL
+            NOT = { has_country_flag = greater_bulgaria_claimed }
+        }
+
+        allow = {
+            war = no
+            state_n_government = 1
+        }
+
+        effect = {
+            set_country_flag = greater_bulgaria_claimed
+            badboy = 15
+            TUR_805 = { add_core = BUL } #Southern Macedonia
+            TUR_803 = { add_core = BUL } #Southern Serbia
+            TUR_860 = { add_core = BUL } #Thrace
+        }
+    }
+}
