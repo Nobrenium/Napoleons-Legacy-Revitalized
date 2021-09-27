@@ -29,6 +29,7 @@ LOU        ="countries/Louisiana.txt"
 KOI        ="countries/Kingdom of Italy.txt"
 LTN	   ="countries/LatinEmpire.txt"
 ARN	   ="countries/Aragon.txt"
+WRE	   ="countries/WRE.txt"
 ##HPM
 PNK        ="countries/Pontianak.txt"
 GHN        ="countries/Ghana.txt"
