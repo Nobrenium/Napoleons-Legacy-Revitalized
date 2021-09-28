@@ -217,4 +217,67 @@ political_decisions = {
 		set_country_flag = koi_wre
 			}
 		}
+	wre_reconquest_hispania = {
+		potential = {
+		NOT = { has_country_flag = wre_hispania }
+		has_country_flag = koi_wre
+		tag = WRE 	
+		}
+		allow = {
+		is_greater_power = yes
+		prestige = 1000
+		}
+		effect = {
+		badboy = 50
+		set_country_flag = wre_hispania
+		SPA_512 = { add_core = WRE }
+		SPA_474 = { add_core = WRE }
+		SPA_477 = { add_core = WRE }
+		SPA_487 = { add_core = WRE }
+		SPA_484 = { add_core = WRE }
+		SPA_492 = { add_core = WRE }
+		SPA_503 = { add_core = WRE }
+		POR_525 = { add_core = WRE }
+		POR_521 = { add_core = WRE }
+		POR_518 = { add_core = WRE }
+		FRA_458 = { add_core = WRE }
+		}
+	}
+	wre_reconquest_gallia = {
+		potential = {
+		NOT = { has_country_flag = wre_gallia }
+		has_country_flag = koi_wre
+		tag = WRE
+		}
+		allow = {
+		is_greater_power = yes
+		prestige = 1500
+		}
+		effect = {
+		badboy = 75
+		set_country_flag = wre_gallia
+		FRA_445 = { add_core = WRE }
+		FRA_442 = { add_core = WRE }
+		FRA_428 = { add_core = WRE }
+		FRA_438 = { add_core = WRE }
+		FRA_435 = { add_core = WRE }
+		FRA_420 = { add_core = WRE }
+		FRA_425 = { add_core = WRE }
+		FRA_418 = { add_core = WRE }
+		FRA_400 = { add_core = WRE }
+		FRA_399 = { add_core = WRE }
+		FRA_404 = { add_core = WRE }
+		FRA_411 = { add_core = WRE }
+		FRA_412 = { add_core = WRE }
+		PRU_570 = { add_core = WRE }
+		PRU_575 = { add_core = WRE }
+		BEL_394 = { add_core = WRE }
+		BEL_387 = { add_core = WRE }
+		NET_379 = { add_core = WRE }
+		SWI_607 = { add_core = WRE }
+		SWI_603 = { add_core = WRE }
+		2568 = { add_core = WRE }
+		
+			}
+	}
 }
