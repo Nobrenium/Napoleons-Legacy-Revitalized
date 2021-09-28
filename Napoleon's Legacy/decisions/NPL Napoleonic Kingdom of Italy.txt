@@ -32,11 +32,9 @@ political_decisions = {
 			}
 			owns = 749
 			}
-		allow = {
-			is_secondary_power = yes
-			}
 		effect = {
 			prestige = 25
+			badboy = -10
 			set_country_flag = koi_augustus
 			}
 		}
@@ -54,7 +52,6 @@ political_decisions = {
 			NOT = { has_country_flag = koi_irredentia_pannonia }
 			}
 		allow = {
-			is_secondary_power = yes
 			prestige = 150
 			}
 		effect = {
@@ -85,7 +82,6 @@ political_decisions = {
 		NOT = { has_country_flag = koi_irredentia_carthaginia }
 		}
 		allow = {
-		is_secondary_power = yes
 		prestige = 100
 		}
 		effect = {
@@ -110,7 +106,6 @@ political_decisions = {
 		NOT = { has_country_flag = koi_irredentia_provencia }
 		}
 		allow = {
-		is_secondary_power = yes
 		prestige = 100
 		}
 		effect = {
@@ -132,7 +127,6 @@ political_decisions = {
 		owns = 1726
 		}
 		allow = {
-		is_secondary_power = yes
 		prestige = 175
 		}
 		effect = {
@@ -153,7 +147,6 @@ political_decisions = {
 		owns = 1726
 		}
 		allow = {
-		is_secondary_power = yes
 		prestige = 200
 		}
 		effect = {
@@ -173,7 +166,6 @@ political_decisions = {
 		owns = 1713
 		}
 		allow = {
-		is_secondary_power = yes
 		prestige = 200
 		}
 		effect = {
@@ -185,4 +177,44 @@ political_decisions = {
 		MOR_1694 = { add_core = ITM }
 		}
 	}
+	koi_western_rome = {
+		potential = {
+		NOT = { has_country_flag = koi_wre }
+		tag = ITM
+		has_country_flag = koi_augustus 
+			}
+		allow = {
+		owns = 1693
+		owns = 1686
+		owns = 1688
+		owns = 1683
+		owns = 1694
+		owns = 1704
+		owns = 1708
+		owns = 1713
+		owns = 1700
+		owns = 498
+		owns = 503
+		owns = 513
+		owns = 1735
+		owns = 1731
+		owns = 1726
+		owns = 467
+		owns = 749
+		owns = 720
+		owns = 744
+		owns = 741
+		owns = 752
+		owns = 753
+		owns = 754
+		owns = 763
+		}
+		effect = {
+		all_owned = { limit = { is_core = ITM } add_core = WRE remove_core = ITM}
+		prestige = 525
+		capital = 743
+		change_tag = WRE
+		set_country_flag = koi_wre
+			}
+		}
 }
