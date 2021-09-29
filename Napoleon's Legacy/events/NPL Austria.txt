@@ -300,3 +300,95 @@ country_event = {
 	}
 }
 }
+country_event = {
+	id = 00043
+	title = "EVTNAME00043"
+	desc = "EVTDESC00043"
+	fire_only_once = yes
+	trigger = { 
+	tag = AUS
+	has_country_flag = franz_joseph
+	NOT = { has_global_flag = hun_free }
+	owns = 641
+	}
+	mean_time_to_happen = { months = 3 }
+	option = {
+	name = "EVTOPTA00043"
+	prestige = 50
+	release_vassal = CRO
+	release_vassal = BAN
+	release_vassal = SIE
+	release_vassal = SER
+	release_vassal = BKV
+	casus_belli = {
+		target = CRO
+		type = conquest
+		months = 12
+	}
+	war = {
+		target = CRO
+		attacker_goal = { casus_belli = conquest }
+	}
+	casus_belli = {
+		target = BAN
+		type = conquest
+		months = 12
+	}
+	war = {
+		target = BAN
+		attacker_goal = { casus_belli = conquest }
+	}
+	casus_belli = {
+		target = SIE
+		type = conquest
+		months = 12
+	}
+	war = {
+		target = SIE
+		attacker_goal = { casus_belli = conquest }
+	}
+	casus_belli = {
+		target = SER
+		type = conquest
+		months = 12
+	}
+	war = {
+		target = SER
+		attacker_goal = { casus_belli = conquest }
+	}
+	casus_belli = {
+		target = BKV
+		type = conquest
+		months = 12
+	}
+	war = {
+		target = BKV
+		attacker_goal = { casus_belli = conquest }
+	}
+	}
+	option = {
+	name = "EVTOPTB00043"
+	badboy = -10
+	release_vassal = CRO
+	release_vassal = BAN
+	release_vassal = SIE
+	release_vassal = SER
+	release_vassal = BKV
+	}
+	option = {	
+	name = "EVTOPTC00043"
+	prestige = 5
+	}
+}
+#GERMANIZATION PROGRAMME
+country_event = {
+	id = 00044
+	is_triggered_only = yes
+	option = {
+	name = "EVTOPTA00044"
+	primary_culture = south_german
+	any_owned = {
+	add_province_modifier = { name = germanization duration = -1 }
+		}
+	}
+}

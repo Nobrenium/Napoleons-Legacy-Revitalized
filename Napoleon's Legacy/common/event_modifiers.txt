@@ -2504,3 +2504,7 @@ ferdinand_king = {
     non_accepted_pop_militancy_modifier = -0.03
     icon = 17
 }
+germanization = {
+   population_growth = 0.01
+   assimilation_rate = 0.5
+}
