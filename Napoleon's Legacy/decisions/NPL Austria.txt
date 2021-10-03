@@ -1,0 +1,22 @@
+political_decisions = {
+	south_german_conquest_aus = {
+	potential = {
+		tag = AUS
+		NOT = { has_country_flag = south_german_conquest }
+		has_country_flag = metternich_stays
+		}
+	allow = {
+		is_greater_power = yes
+		state_n_government = 1
+		}
+		
+	effect = {
+		prestige = 50
+		set_country_flag = south_german_conquest
+		badboy = 10
+		BAV_599 = { add_core = AUS }
+		BAV_595 = { add_core = AUS }
+		BAD_586 = { add_core = AUS }
+		WUR_589 = { add_core = AUS }
+		}
+	}

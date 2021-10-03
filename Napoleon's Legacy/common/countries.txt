@@ -30,6 +30,7 @@ KOI        ="countries/Kingdom of Italy.txt"
 LTN	   ="countries/LatinEmpire.txt"
 ARN	   ="countries/Aragon.txt"
 WRE	   ="countries/WRE.txt"
+HLR	   ="countries/Holy Roman Empire.txt"
 ##HPM
 PNK        ="countries/Pontianak.txt"
 GHN        ="countries/Ghana.txt"

@@ -1,0 +1,12 @@
+#GERMANIZATION PROGRAMME
+country_event = {
+	id = 00044
+	is_triggered_only = yes
+	option = {
+	name = "EVTOPTA00044"
+	primary_culture = south_german
+	any_owned = {
+	add_province_modifier = { name = germanization duration = -1 }
+		}
+	}
+}

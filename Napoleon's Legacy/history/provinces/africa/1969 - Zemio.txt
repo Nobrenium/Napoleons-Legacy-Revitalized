@@ -1,3 +1,6 @@
+owner = WAD
+controller = WAD
+add_core = WAD
 add_core = AZA
 trade_goods = cattle
 life_rating = 10

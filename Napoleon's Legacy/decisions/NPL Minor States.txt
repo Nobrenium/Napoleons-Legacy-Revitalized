@@ -1,0 +1,78 @@
+political_decisions = {
+	som_ethiopian_jihad = {
+	alert = yes
+	potential = {
+		tag = SOM
+		NOT = { has_country_flag = som_ethiopia_jihad }
+		}
+	allow = {
+		prestige = 15
+		}
+	effect = {
+		badboy = 10
+		set_country_flag = som_ethiopia_jihad 
+		ENG_1848 = { add_core = SOM }
+		ETH_1852 = { add_core = SOM }
+		ETH_1853 = { add_core = SOM }
+		ETH_1859 = { add_core = SOM }	
+		ETH_1865 = { add_core = SOM }
+		}
+	}
+	gaz_north_expansion = {
+	alert = yes
+	potential = {
+		tag = GAZ
+		NOT = { has_country_flag = gaz_north }
+		}
+	allow = {
+		prestige = 20
+		}
+	effect = {
+		badboy = 5
+		set_country_flag = gaz_north
+		POR_2054 = { add_core = GAZ }
+		POR_2053 = { add_core = GAZ }
+		POR_2060 = { add_core = GAZ }
+		}
+	}
+	gaz_south_expansion = {
+	alert = yes
+	potential = {
+		tag = GAZ
+		NOT = { has_country_flag = gaz_south }
+		}
+	allow = {
+		prestige = 30
+		}
+	effect = {
+		set_country_flag = gaz_south
+		TRN_2108 = { add_core = GAZ }
+		ZUL_2113 = { add_core = GAZ }
+		ORA_2103 = { add_core = GAZ }
+		}
+	}
+	gaz_west_expansion = {
+	alert = yes
+	potential = {
+		tag = GAZ
+		has_country_flag = gaz_south
+		has_country_flag = gaz_north
+		NOT = { has_country_flag = gaz_west }
+		}
+	allow = {
+		prestige = 50
+		owns = 2108
+		owns = 2103
+		owns = 2054
+		owns = 2053
+		}
+	effect = {
+		set_country_flag = gaz_west
+		ENG_2068 = { add_core = GAZ }
+		ENG_2071 = { add_core = GAZ }
+		ENG_2074 = { add_core = GAZ }
+		ENG_2092 = { add_core = GAZ }
+		ENG_2083 = { add_core = GAZ }
+		}
+	}
+}
