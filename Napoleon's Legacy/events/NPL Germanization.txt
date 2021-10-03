@@ -10,3 +10,33 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = 00045
+	is_triggered_only = yes
+	option = {
+	name = "EVTOPTA00045"
+	any_owned = {
+	add_province_modifier = { name = germanization_2 duration = -1 }
+		}
+	}
+}
+country_event = {
+	id = 00046
+	is_triggered_only = yes
+	option = {
+	name = "EVTOPTA00046"
+	any_owned = {
+	add_province_modifier = { name = germanization_3 duration = -1 }
+		}
+	}
+}
+country_event = {
+	id = 00047
+	is_triggered_only = yes
+	option = {
+	name = "EVTOPTA00047"
+	any_owned = {
+	add_province_modifier = { name = germanization_4 duration = -1 }
+		}
+	}
+}

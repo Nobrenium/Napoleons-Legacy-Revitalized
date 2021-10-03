@@ -2508,3 +2508,16 @@ germanization = {
    population_growth = 0.01
    assimilation_rate = 0.5
 }
+germanization_2 = {
+    assimilation_rate = 0.5
+    non_accepted_pop_militancy_modifier = -0.03
+    icon = 17
+}
+germanization_3 = {
+    assimilation_rate = 0.5
+    ruling_party_support = 0.3
+}
+germanization_4 = {
+    assimilation_rate = 0.5
+    RGO_output = 0.2
+}
