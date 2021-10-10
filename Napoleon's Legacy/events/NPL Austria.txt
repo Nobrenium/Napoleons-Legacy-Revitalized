@@ -380,3 +380,22 @@ country_event = {
 	prestige = 5
 	}
 }
+country_event = {
+	id = 00048
+	title = "EVTNAME00048"
+	desc = "EVTDESC00048"
+	fire_only_once = yes
+	trigger = {
+	tag = AUS
+	has_country_flag = metternich_stays
+	}
+	mean_time_to_happen = { years = 1 }
+	option = {
+	name = "EVTOPTA00048"
+	set_country_flag = hapsburg_europe
+	}
+	option = {
+	name = "EVTOPTB00048"
+	set_country_flag = hapsburg_germany
+	}
+}
