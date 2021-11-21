@@ -2521,3 +2521,15 @@ germanization_4 = {
     assimilation_rate = 0.5
     RGO_output = 0.2
 }
+french_military_bad = {
+    org_regain = -0.5
+    land_organization = -0.5
+}
+french_economy_bad = {
+    tax_efficiency = -0.1
+    RGO_output = -0.4
+}
+french_exhaustion = {
+     war_exhaustion = 1.0
+     core_pop_militancy_modifier = 0.03
+}
