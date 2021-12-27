@@ -4,5 +4,6 @@ add_core = AUS
 add_core = TRE
 add_core = SLO
 add_core = ILL
+add_core = KOI
 trade_goods = grain
 life_rating = 40
