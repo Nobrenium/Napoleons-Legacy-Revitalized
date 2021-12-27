@@ -3,6 +3,6 @@ controller = REI
 add_core = PRG
 add_core = REI
 add_core = BRZ
-trade_goods = sulphur
+trade_goods = tea
 terrain = savanna
 life_rating = 31
