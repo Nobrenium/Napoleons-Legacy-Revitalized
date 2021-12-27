@@ -403,17 +403,29 @@ political_decisions = {
                 limit = {
                     OR = {
                         is_core = OMA
+                        is_sphere_leader_of = OMA 
                         is_core = ABU
+                        is_sphere_leader_of = ABU
                         is_core = NYE
+                        is_sphere_leader_of = NYE
                         is_core = LHJ
+                        is_sphere_leader_of = LHJ
                         is_core = FDL
+                        is_sphere_leader_of = FDL
                         is_core = KTH
+                        is_sphere_leader_of = KTH
                         is_core = MHR
+                        is_sphere_leader_of = MHR
                         is_core = YEM
+                        is_sphere_leader_of = YEM
                         is_core = BHR
+                        is_sphere_leader_of = BHR
                         is_core = QAT
+                        is_sphere_leader_of = QAT
                     }
-                    NOT = { is_core = ZAN }
+                    NOT = { 
+                        is_core = ZAN
+                        is_core = BAL
                 }
                 add_core = ARA
             }
