@@ -26,7 +26,7 @@ country_event = {
                 }
             casus_belli = {
                 target = PRG
-                type = make_puppet
+                type = conquest
                 months = 12
                 }
         ai_chance = {
