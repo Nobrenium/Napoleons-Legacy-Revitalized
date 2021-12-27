@@ -473,6 +473,10 @@ province_event = {
                     province_id = 2055
                     #province_id = 1978
                     province_id = 1980
+                    province_id = 2410
+                    province_id = 2319
+                    province_id = 2286
+                    province_id = 2402
                     province_id = 1981
                     #province_id = 2624
                 }
@@ -491,6 +495,8 @@ province_event = {
                     province_id = 1996
                     province_id = 2192
                     province_id = 2317
+                    province_id = 2407
+                    province_id = 2287
                     province_id = 2318
                     province_id = 2319
                     province_id = 2321
@@ -500,7 +506,8 @@ province_event = {
                     province_id = 2549
                     province_id = 2550
                     province_id = 2600
-                    province_id = 2286
+                    province_id = 2287
+                    province_id = 2320
                 }
             }
         }
