@@ -238,7 +238,7 @@ SPA_513 = { 513 514 515 516 } #Granada
 
 POR_518 = { 518 519 520 } #Douro
 
-POR_521 = { 521 522 523 524 } #Estremadura
+POR_521 = { 521 522 523 524 } #Ribatejo
 
 POR_525 = { 525 526 527 } #Alentejo
 
@@ -330,11 +330,9 @@ RUS_715 = { 715 711 713 716 } #West Galicia
 
 AUS_726 = { 726 727 728 2669 2568 } #Lombardia
 
-AUS_733 = { 736 737 } #Friuli
-
 AUS_729 = { 729 730 731 732 733 734 8 } #Venetia
 
-AUS_736 = { 769 770 778 } #Istria
+AUS_736 = { 736 737 769 770 778 } #Istria
 
 AUS_768 = { 767 768 } #Slovenia
 
