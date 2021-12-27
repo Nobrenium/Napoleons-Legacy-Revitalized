@@ -5,6 +5,7 @@ political_decisions = {
             OR = {
                 tag = SPA
                 tag = CHL
+            }
             OR = {
                 2333 = { empty = yes }
                 2334 = { empty = yes }
