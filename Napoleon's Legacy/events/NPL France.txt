@@ -32,6 +32,266 @@ country_event = {
 	}
 	}
 }
+# French Debuffs
+country_event = {
+	id = 00049
+	title = "EVTNAME00049"
+	desc = "EVTDESC00049"
+	fire_only_once = yes
+	mean_time_to_happen = { days = 5 }
+	trigger = {
+		tag = FRA
+		}	
+	option = {
+	name = "EVTOPTA00049"
+	set_country_flag = french_army_bad
+	add_country_modifier = { name = french_military_bad duration = -1 }
+	}
+}
+country_event = {
+	id = 00050
+	title = "EVTNAME00050"
+	desc = "EVTDESC00050"
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	trigger = {
+		tag = FRA
+		}	
+	option = {
+	name = "EVTOPTA00050"
+	set_country_flag = french_economy_bad
+	add_country_modifier = { name = french_economy_bad duration = -1 }
+	}
+}
+country_event = {
+	id = 00051
+	title = "EVTNAME00051"
+	desc = "EVTDESC00051"
+	fire_only_once = yes
+	mean_time_to_happen = { days = 15 }
+	trigger = {
+		tag = FRA
+		}	
+	option = {
+	name = "EVTOPTA00051"
+	set_country_flag = french_exhaustion
+	add_country_modifier = { name = french_exhaustion duration = -1 }
+	}
+}
+#Nationalists Upset
+country_event = {
+	id = 00052
+	title = "EVTNAME00052"
+	desc = "EVTDESC000052"
+	fire_only_once = yes
+	mean_time_to_happen = { days = 20 }
+	trigger = {
+		tag = FRA
+		}
+	option = {
+	name = "EVTOPTA00052"
+	set_country_flag = rhine_agitated
+	any_owned = {
+		limit = { is_core = RHI }
+		add_province_modifier = { name = nationalist_agitation duration = 730 }
+		}
+	}
+}
+country_event = {
+	id = 00053
+	title = "EVTNAME00053"
+	desc = "EVTDESC00053"
+	fire_only_once = yes
+	mean_time_to_happen = { days = 30 }
+	trigger = {
+		tag = FRA 
+		}
+	option = {
+	name = "EVTOPTA00053"
+	set_country_flag = catalonia_agitated
+	any_owned = {
+		limit = { is_core = CAT }
+		add_province_modifier = { name = nationalist_agitation duration = 730 }
+		}
+	}
+}
+country_event = {
+	id = 00054
+	title = "EVTNAME00054"
+	desc = "EVTDESC00054"
+	fire_only_once = yes
+	mean_time_to_happen = { days = 50 }
+	trigger = {
+		tag = FRA
+		}
+	option = {
+	name = "EVTOPTA00054"
+	set_country_flag = flems_agitated
+	any_owned = {
+		limit = { is_core = NET }
+		add_province_modifier = { name = nationalist_agitation duration = 730 }
+		}
+	}
+}
+country_event = {
+	id = 00055
+	title = "EVTNAME00055"
+	desc = "EVTDESC00055"
+	fire_only_once = yes
+	mean_time_to_happen = { days = 20 }
+	trigger = {
+		tag = FRA
+		year = 1843
+		}
+	option = {
+	name = "EVTOPTA00055"
+	set_country_flag = rhenish_rebellion
+	any_owned = {
+		limit = { OR = { is_core = RHI region = FRA_412 province_id = 397 } }
+		secede_province = RHI
+		}
+	RHI = {
+		government = democracy
+		political_reform = mandatory_service
+		political_reform = universal_weighted_voting
+		political_reform = yes_meeting
+		political_reform = gerrymandering
+		leadership = 80
+		treasury = 10000
+		small_arms = 100
+		ammunition = 200
+		canned_food = 200
+		wine = 200
+		liquor = 200
+		any_pop = { militancy = -6 }
+		add_country_modifier = { name = small_country_draft duration = 1825 }
+		}
+	war = {
+		target = RHI
+		attacker_goal = { casus_belli = annex_core_country }
+		defender_goal = { caus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "EVTOPTB00055"
+		set_country_flag = rhenish_rebellion
+	any_owned = {
+		limit = { OR = { is_core = RHI region = FRA_412 province_id = 397 } }
+		secede_province = RHI
+		}
+	RHI = {
+		government = democracy
+		political_reform = mandatory_service
+		political_reform = universal_weighted_voting
+		political_reform = yes_meeting
+		political_reform = gerrymandering
+		leadership = 80
+		treasury = 10000
+		small_arms = 100
+		ammunition = 200
+		canned_food = 200
+		wine = 200
+		liquor = 200
+		any_pop = { militancy = -6 }
+		add_country_modifier = { name = small_country_draft duration = 1825 }
+		}
+	war = {
+		target = RHI
+		attacker_goal = { casus_belli = annex_core_country }
+		defender_goal = { caus_belli = status_quo }
+		}
+	change_tag_no_core_switch = RHI
+	}
+}
+country_event = {
+	id = 00056
+	title = "EVTNAME00056"
+	desc = "EVTDESC00056"
+	fire_only_once = yes
+	mean_time_to_happen = { days = 50 }
+	trigger = {
+		tag = FRA
+		year = 1843
+		}
+	option = {
+	name = "EVTOPTA00056"
+	set_country_flag = catalonian_rebellion
+	any_owned = {
+		limit = { is_core = CAT }
+		secede_province = CAT
+		}
+	CAT = {
+		government = democracy
+		political_reform = mandatory_service
+		political_reform = universal_weighted_voting
+		political_reform = yes_meeting
+		political_reform = gerrymandering
+		leadership = 80
+		treasury = 10000
+		small_arms = 100
+		ammunition = 200
+		canned_food = 200
+		wine = 200
+		liquor = 200
+		any_pop = { militancy = -6 }
+		add_country_modifier = { name = small_country_draft duration = 1825 }
+		}
+	war = {
+		target = CAT
+		attacker_goal = { casus_belli = annex_core_country }
+		defender_goal = { caus_belli = status_quo }
+		}
+	}
+	option = {
+		name = "EVTOPTB00056"
+		set_country_flag = catalonian_rebellion
+	any_owned = {
+		limit = { is_core = CAT }
+		secede_province = CAT
+		}
+	CAT = {
+		government = democracy
+		political_reform = mandatory_service
+		political_reform = universal_weighted_voting
+		political_reform = yes_meeting
+		political_reform = gerrymandering
+		leadership = 80
+		treasury = 10000
+		small_arms = 100
+		ammunition = 200
+		canned_food = 200
+		wine = 200
+		liquor = 200
+		any_pop = { militancy = -6 }
+		add_country_modifier = { name = small_country_draft duration = 1825 }
+		}
+	war = {
+		target = CAT
+		attacker_goal = { casus_belli = annex_core_country }
+		defender_goal = { caus_belli = status_quo }
+		}
+	change_tag_no_core_switch = CAT
+	}
+}
+country_event = {
+	id = 00057
+	title = "EVTNAME00057"
+	desc = "EVTDESC00057"
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+	name = "EVTOPTA00057"
+	war = {
+		target = SAR
+		attacker_goal = { casus_belli = annex_core_country }
+		defender_goal = { casus_belli = status_quo }
+		}
+	}
+	option = {
+	name = "EVTOPTB00057"
+	prestige = -50
+	}
+}
 # Reduction of Swiss lands
 country_event = {
     id = 7880765

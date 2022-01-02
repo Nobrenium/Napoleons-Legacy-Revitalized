@@ -1,27 +1,4 @@
 political_decisions = {
-    end_the_mysore_monarchy = {
-        picture = mysore_annex
-        potential = {
-            NOT = {
-                has_country_flag = mysore_monarchy_is_over
-            }
-            exists = MYS
-            MYS = { ai = yes }
-            tag = FRA
-        }
-
-        allow = {
-            year = 1840
-            state_n_government = 1
-        }
-
-        effect = {
-            # TODO make this an event chain so mysore can reject.
-            inherit = MYS
-            set_country_flag = mysore_monarchy_is_over
-        }
-    }
-
     integrate_neuchatel_france = {
         picture = declare_republic_of_neuchatel
         potential = {
@@ -128,122 +105,6 @@ political_decisions = {
         }
     }
 
-    release_AFA = {
-        potential = {
-            OR = {
-                tag = FRA
-                tag = BOR
-            }
-
-            OR = {
-                war_with = FRA
-                war_with = BOR
-            }
-
-            FRA = {
-                any_owned_province = {
-                    OR = {
-                        is_core = BRE
-                        is_core = MUN
-                        is_core = SAR
-                        is_core = NET
-                        is_core = RHI
-                        is_core = HAM
-                        is_core = OLD
-                        is_core = SWI
-                        is_core = CAT
-                        is_core = HOL
-                        is_core = LUB
-                        is_core = LUC
-                    }
-                }
-            }
-
-            NOT = { has_country_flag = AFA_done }
-            AFA = { exists = no }
-        }
-
-        allow = {
-            war = yes
-            AFA = { exists = no }
-        }
-
-        effect = {
-            FRA = {
-                any_owned = {
-                    limit = {
-                        OR = {
-                            is_core = BRE
-                            is_core = MUN
-                            is_core = SAR
-                            is_core = NET
-                            is_core = RHI
-                            is_core = HAM
-                            is_core = OLD
-                            is_core = SWI
-                            is_core = CAT
-                            is_core = HOL
-                            is_core = LUB
-                            is_core = LUC
-                        }
-                        NOT = {
-                            province_id = 397
-                            province_id = 464
-                        }
-                    }
-
-                    add_core = AFA
-                }
-            }
-
-            any_owned = {
-                limit = {
-                    is_core = AFA
-                }
-                remove_core = THIS
-            }
-
-            release = AFA
-            AFA = {
-                leadership = 80
-                political_reform = mandatory_service
-                treasury = 10000
-                small_arms = 100
-                ammunition = 200
-                canned_food = 200
-                wine = 200
-                liquor = 200
-            }
-
-            any_country = {
-                limit = {
-                    exists = yes
-                        NOT = {
-                            tag = THIS
-                        }
-                        OR = {
-                            tag = FRA
-                            tag = BOR
-                        }
-                }
-
-                country_event = 86000
-            }
-            set_country_flag = AFA_done
-            set_country_flag = AFA_is_released
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                NOT = {
-                    war_exhaustion = 10
-                }
-            }
-        }
-    }
-
     french_invasion = {
          potential = {
             tag = FRA
@@ -293,5 +154,52 @@ political_decisions = {
             }
         }
     }
-
+	fix_army = {
+		potential = {
+			tag = FRA
+			has_country_flag = french_army_bad
+			NOT = { has_country_flag = fixed_army }
+			}
+		allow = {
+			army_professionalism = 1
+			prestige = 150
+			at_war = no
+			}
+		effect = {
+			remove_country_modifier = french_military_bad
+			set_country_flag = fixed_army
+			}
+		}
+	fix_economy = {
+		potential = {
+			tag = FRA
+			has_country_flag = french_economy_bad
+			NOT = { has_country_flag = fixed_economy }
+			}
+		allow = {
+			interchangeable_parts = 1
+			money = 100000
+			}
+		effect = {
+			money = -100000
+			remove_country_modifier = french_economy_bad
+			set_country_flag = fixed_economy
+			}
+		}
+	fix_exhaustion = {
+		potential = {
+			tag = FRA
+			has_country_flag = french_exhaustion
+			NOT = { has_country_flag = fixed_exhaustion }
+			}
+		allow = {
+			year = 1850
+			prestige = 500
+			}
+		effect = {
+			remove_country_modifier = french_exhaustion
+			set_country_flag = fixed_exhaustion
+			prestige = 100
+			}
+		}
 }
