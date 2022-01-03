@@ -114,7 +114,7 @@ TUR = {
 
 army = {
     name = "Army Corps of the Guard"
-    location = 354
+    location = 1003
     regiment = {
         name= "1.1-ya Gvardeiskaya Pekhotnaya Diviziya"
         type = infantry
@@ -167,7 +167,7 @@ army = {
 
 army = {
     name = "Grenadier Corps"
-    location = 994
+    location = 1012
     regiment = {
         name= "1.1-ya Grenaderskaya Diviziya"
         type = infantry
@@ -243,7 +243,7 @@ army = {
 
 army = {
     name = "2. Line Corps"
-    location = 958
+    location = 943
     regiment = {
         name= "1.4-ya Pekhotnaya Diviziya"
         type = infantry
@@ -300,75 +300,6 @@ army = {
 }
 
 army = {
-    name = "Azov Cossacks"
-    location = 1047
-    regiment = {
-        name= "1.Azov Cossacks"
-        type = cavalry
-        home = 1047
-    }
-
-    regiment = {
-        name= "2.Azov Cossacks"
-        type = cavalry
-        home = 1047
-    }
-
-    regiment = {
-        name= "3.Azov Cossacks"
-        type = cavalry
-        home = 979
-    }
-
-}
-
-army = {
-    name = "1. Don Cossacks"
-    location = 979
-    regiment = {
-        name= "1.1. Don Cossacks"
-        type = cavalry
-        home = 1039
-    }
-
-    regiment = {
-        name= "2.1. Don Cossacks"
-        type = cavalry
-        home = 1019
-    }
-
-    regiment = {
-        name= "3.1. Don Cossacks"
-        type = cavalry
-        home = 1045
-    }
-
-}
-
-army = {
-    name = "2. Don Cossacks"
-    location = 959
-    regiment = {
-        name= "1.2. Don Cossacks"
-        type = cavalry
-        home = 1039
-    }
-
-    regiment = {
-        name= "2.2. Don Cossacks"
-        type = cavalry
-        home = 1019
-    }
-
-    regiment = {
-        name= "3.2. Don Cossacks"
-        type = cavalry
-        home = 1040
-    }
-
-}
-
-army = {
     name = "7-ya Pekhotnaya Diviziya"
     location = 1075
 
@@ -387,99 +318,8 @@ army = {
 
 
 navy = {
-    name = "Imperial Black Sea Fleet"
-    location = 967
-    ship = {
-        name= "Nord Adler"
-        type = manowar
-    }
-
-    ship = {
-        name= "Prints Gustav"
-        type = manowar
-    }
-
-    ship = {
-        name= "Ne Tron Menya"
-        type = manowar
-    }
-
-    ship = {
-        name= "Svyastoslav"
-        type = manowar
-    }
-
-    ship = {
-        name= "Chrabryi"
-        type = manowar
-    }
-
-    ship = {
-        name= "Smelyi"
-        type = manowar
-    }
-
-    ship = {
-        name= "Tri Svyatitelei"
-        type = manowar
-    }
-
-    ship = {
-        name= "Yupiter"
-        type = manowar
-    }
-
-    ship = {
-        name= "Chesma"
-        type = manowar
-    }
-
-    ship = {
-        name= "Mironosets"
-        type = manowar
-    }
-
-    ship = {
-        name= "Asia"
-        type = manowar
-    }
-
-    ship = {
-        name= "Azov"
-        type = manowar
-    }
-
-    ship = {
-        name= "Rossiya"
-        type = manowar
-    }
-
-    ship = {
-        name= "Saratov"
-        type = manowar
-    }
-
-    ship = {
-        name= "Blagodat'"
-        type = manowar
-    }
-
-
-    ship = {
-        name= "1. Transportnaya Flotiliya"
-        type = clipper_transport
-    }
-
-    ship = {
-        name= "2. Transportnaya Flotiliya"
-        type = clipper_transport
-    }
-
-}
-
-navy = {
     name = "Imperial Northern Fleet"
-    location = 994
+    location = 981
     ship = {
         name= "Dvenadtsat' Apostolov"
         type = manowar
@@ -541,12 +381,12 @@ navy = {
     }
 
     ship = {
-        name= "3. Transportnaya Flotiliya"
+        name= "1. Transportnaya Flotiliya"
         type = clipper_transport
     }
 
     ship = {
-        name= "4. Transportnaya Flotiliya"
+        name= "2. Transportnaya Flotiliya"
         type = clipper_transport
     }
 
@@ -728,7 +568,7 @@ leader = {
 }
 
 leader = {
-    name = "Alexander von L�ders"
+    name = "Alexander von Lüders"
     picture = rus_gen_lueders
     date = 1829.1.1
     type = land
