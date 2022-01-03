@@ -4,6 +4,7 @@ political_decisions = {
         potential = {
             tag = PLC
             NOT = { has_country_flag = reclaimed_prussia }
+            NOT = { has_global_flag = accepted_prussian_posen }
         }
 
         allow = {
@@ -39,6 +40,7 @@ political_decisions = {
             tag = PLC
             has_country_flag = reclaimed_prussia
             NOT = { has_country_flag = reclaimed_silesia }
+            NOT = { has_country_flag = accepted_prussian_posen }
             owns = 690 # Danzig
             owns = 695 # Konigsberg
         }
@@ -72,6 +74,7 @@ political_decisions = {
             tag = PLC
             NOT = { has_country_flag = reclaimed_galicia }
             NOT = { GLM = { all_core = { is_core = PLC } } }
+            NOT = { relation = { who = AUS value = 100 } }
         }
 
         allow = {
@@ -83,7 +86,7 @@ political_decisions = {
             set_country_flag = reclaimed_galicia
             badboy = 6
 
-            GLM = { all_core = { add_core = PLC } }
+            GLM = { all_core = { add_core = PLC remove_core = GLM } }
             relation = { who = AUS value = -200 }
         }
 
@@ -102,6 +105,8 @@ political_decisions = {
         potential = {
             tag = PLC
             NOT = { has_country_flag = reclaimed_ruthenian_borderlands }
+            has_global_flag = russian_ruthenia
+            NOT = { relation = { who = RUS value = 100 } }
         }
 
         allow = {
@@ -114,7 +119,7 @@ political_decisions = {
             badboy = 10
 
             RUS_940 = { add_core = PLC }
-            RUS_959 = { add_core = PLC }
+            RUS_955 = { add_core = PLC }
             RUS_958 = { add_core = PLC }
 
             random_country = { limit = { has_country_flag = russian_country exists = yes } relation = { who = PLC value = -200 } }
