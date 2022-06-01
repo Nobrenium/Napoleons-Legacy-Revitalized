@@ -14,7 +14,7 @@ country_event = {
             who = FROM
             value = 50
             }
-        ai_chance = { factor = 0.9 }
+        ai_chance = { factor = 0.2 }
         }
 
     option = {
@@ -24,13 +24,20 @@ country_event = {
             who = PRG
             value = -200
                 }
-            casus_belli = {
-                target = PRG
-                type = conquest
-                months = 12
-                }
+            war = {
+            target = PRG
+            attacker_goal = {
+                casus_belli = conquest
+            }
+
+            defender_goal = {
+                casus_belli = status_quo
+            }
+
+            call_ally = no
+            }
         ai_chance = {
-            factor = 0.05
+            factor = 0.8
             modifier = {
                 factor = 0.05
                 war_policy = jingoism
