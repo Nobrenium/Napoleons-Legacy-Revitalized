@@ -3,9 +3,6 @@ political_decisions = {
         picture = parallel_49
         potential = {
             tag = CAN
-            NOT = {
-                has_country_flag = imperial_cession
-            }
         }
 
         allow = {
