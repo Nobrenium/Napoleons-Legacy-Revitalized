@@ -171,8 +171,6 @@ political_decisions = {
 
         effect = {
             set_global_flag = italia_ulterior
-            AUS_733 = { add_core = THIS } #Friuli
-
             AUS_736 = { add_core = THIS } #Istria
             781 = { add_core = THIS } #Zadar
         }
