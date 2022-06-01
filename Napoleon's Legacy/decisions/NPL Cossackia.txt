@@ -24,7 +24,6 @@ political_decisions = {
 	potential = {
 		tag = DON
 		NOT = { has_country_flag = cossack_west }
-                NOT = { has_global_flag = russian_ruthenia }
 		}
 	allow = {
 		state_n_government = 1
