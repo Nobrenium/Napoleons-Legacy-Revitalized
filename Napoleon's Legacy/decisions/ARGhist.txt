@@ -152,7 +152,7 @@ political_decisions = {
         }
         allow = {
             war = no
-            OR =
+            OR = {
                 owns = 2337
                 is_greater_power = yes
                 nationalism_n_imperialism = 1
