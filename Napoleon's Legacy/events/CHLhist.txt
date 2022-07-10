@@ -8,6 +8,7 @@ country_event = {
         OR = {
         tag = SPA
         tag = CHL
+        }
         OR = {
             2332 = { empty = yes }
             2333 = { empty = yes }
